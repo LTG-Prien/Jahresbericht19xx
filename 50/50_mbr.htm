@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="AUTHOR" content="LTG Prien, L. Hartl, Dr. G. Hetz">
+<title>Auswahlmenu2</title>
+<link rel=stylesheet type="text/css" href="../ltg50.css">
+<style>
+  iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 20px;
+  }
+</style>
+<script>
+  function load(a, x) {
+      if (x === "not") {
+          document.querySelector('select[name="Auswahl2"]').blur();
+          return;
+      } else {
+          document.getElementById('auswahl1').src = x;
+          document.querySelector('select[name="Auswahl2"]').blur();
+      }
+  }
+</script>
+</head>
+<body background="../blau.gif">
+<center>
+<form name "Select2">
+<select name="Auswahl2" size="1" OnChange="load(2, this.form.Auswahl2.options[this.form.Auswahl2.selectedIndex].value)" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150>
+        <option selected value="not">Rubrik</option>
+        <option value="kl_idx.htm">Klassen</option>
+        <option value="pers_idx.htm">Lehrkr&auml;fte</option>
+        <option value="vera_idx.htm">1. Skikurs</option>
+        <option value="bild_idx.htm">Bilderbogen</option>
+</select>
+</form>
+<iframe id="auswahl1" name="auswahl1"></iframe>
+</center>
+</body>
+</html>
