@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('stud_f1.htm')" background="../blau.gif">
-<p><a href="stud_f1.htm#1">LK Physik an der Uni Erlangen</a></p>
-<p><a href="stud_f1.htm#2">10c in Speyer</a></p>
-<p><a href="stud_f1.htm#3">Studienfahrt der Klasse 10b</a></p>
-<p><a href="stud_f2.htm#1">11c in Berlin</a></p>
-<p><a href="stud_f2.htm#2">Graulhet-Fahrt</a></p>
-<p><a href="studf.htm">Bilder von den Studienfahrten</a></p>
-<p><a href="ski.htm">Skilager</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nstud_f1.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f1.htm#1', '*')">LK Physik an der Uni Erlangen</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f1.htm#2', '*')">10c in Speyer</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f1.htm#3', '*')">Studienfahrt der Klasse 10b</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f2.htm#1', '*')">11c in Berlin</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f2.htm#2', '*')">Graulhet-Fahrt</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudf.htm', '*')">Bilder von den Studienfahrten</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skilager</a></p>
 </body>
 </html>

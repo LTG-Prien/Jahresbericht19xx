@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('graulhet.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngraulhet.htm', '*')" background="../blau.gif">
 
-<P><A HREF="theaterf.htm">Theaterfahrten</A></P>
-<P><A HREF="stud_f1.htm#1">Studienfahrt LK Französisch</A></P>
-<P><A HREF="stud_f1.htm#2">Studienfahrt LK Physik, Chemie, Biologie</A></P>
-<P><A HREF="graulhet.htm">Austausch mit Graulhet</A></P>
-<P><A HREF="stud_f2.htm">Klasse 9a in München</A></P>
-<P><A HREF="ski.htm">Skilager</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntheaterf.htm', '*')">Theaterfahrten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f1.htm#1', '*')">Studienfahrt LK Französisch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f1.htm#2', '*')">Studienfahrt LK Physik, Chemie, Biologie</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngraulhet.htm', '*')">Austausch mit Graulhet</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud_f2.htm', '*')">Klasse 9a in München</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skilager</A></P>
 </body>
 </html>

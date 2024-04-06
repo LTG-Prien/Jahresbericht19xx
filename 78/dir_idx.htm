@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('kollegst.htm')" background="../blau.gif">
-<P><A HREF="kollegst.htm">Kollegstufe</A></P>
-<P><A HREF="isp.htm">Prjekt: Schülerbeteiligung in der Mittelstufe</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nkollegst.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkollegst.htm', '*')">Kollegstufe</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nisp.htm', '*')">Prjekt: Schülerbeteiligung in der Mittelstufe</A></P>
 </body>
 </html>

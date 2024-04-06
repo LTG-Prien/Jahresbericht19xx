@@ -9,15 +9,15 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('01_5960.htm')" background="../blau.gif">
-<P><A HREF="01_5960.htm">1. Klassen</A></P>
-<P><A HREF="02_5960.htm">2. Klasse</A></P>
-<P><A HREF="03_5960.htm">3. Klassen</A></P>
-<P><A HREF="04_5960.htm">4. Klassen</A></P>
-<P><A HREF="05_5960.htm">5. Klassen</A></P>
-<P><A HREF="06_5960.htm">6. Klassen</A></P>
-<P><A HREF="07_5960.htm">7. Klasse</A></P>
-<P><A HREF="08_5960.htm">8. Klasse</A></P>
-<P><A HREF="09_5960.htm">9. Klasse</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\n01_5960.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n01_5960.htm', '*')">1. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n02_5960.htm', '*')">2. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n03_5960.htm', '*')">3. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n04_5960.htm', '*')">4. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n05_5960.htm', '*')">5. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n06_5960.htm', '*')">6. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n07_5960.htm', '*')">7. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n08_5960.htm', '*')">8. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n09_5960.htm', '*')">9. Klasse</A></P>
 </body>
 </html>

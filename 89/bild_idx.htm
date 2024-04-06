@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('comp.htm')" background="../blau.gif">
-<P><A HREF="comp.htm">Der neue Computerraum</A></P>
-<P><A HREF="rudi.htm">Rudi Schmid und seine Freunde</A></P>
-<P><A HREF="jena.htm">Dr. Jena staunt</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ncomp.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ncomp.htm', '*')">Der neue Computerraum</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nrudi.htm', '*')">Rudi Schmid und seine Freunde</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\njena.htm', '*')">Dr. Jena staunt</A></P>
 </body>
 </html>

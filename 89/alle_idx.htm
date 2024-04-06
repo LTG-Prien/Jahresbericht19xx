@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('allerl1.htm')" background="../blau.gif">
-<P><A HREF="allerl1.htm#1">SMV</A></P>
-<P><A HREF="allerl1.htm#2">Elternbeirat</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nallerl1.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nallerl1.htm#1', '*')">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nallerl1.htm#2', '*')">Elternbeirat</A></P>
 </body>
 </html>

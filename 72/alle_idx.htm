@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
 
-<P><A HREF="smv.htm">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm', '*')">SMV</A></P>
 
 
 </body>

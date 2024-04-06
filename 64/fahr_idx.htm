@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('fahrten1.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfahrten1.htm', '*')" background="../blau.gif">
 
-<P><A HREF="fahrten1.htm#1">Besuch des Salzbergwerks Berchtesgaden im September</A></P>
-<P><A HREF="fahrten1.htm#2">Auf den Spuren Hofmillers</A></P>
-<P><A HREF="fahrten2.htm">Tagebuch einer Studienreise der Klasse 9 a</A></P>
-<P><A HREF="fahrten3.htm">Oberstufenschüler in London</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten1.htm#1', '*')">Besuch des Salzbergwerks Berchtesgaden im September</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten1.htm#2', '*')">Auf den Spuren Hofmillers</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten2.htm', '*')">Tagebuch einer Studienreise der Klasse 9 a</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten3.htm', '*')">Oberstufenschüler in London</A></P>
 </body>
 </html>

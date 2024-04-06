@@ -3,6 +3,9 @@
 /* Hier können Sie Schriftarten, Schriftgroessen, Abstände zwischen Text und Bildern usw. ändern */
 /* Aenderungen auf eigene Gefahr! */
 
+a { text-decoration: underline;}
+a:hover { cursor: pointer; }
+
 
 h1,h2,h3,h4
      { font-family:Arial,Helv,sans-serif; }
@@ -24,7 +27,7 @@ p,ul,ol,li,div,td,th,nobr,b,i,br,em { font-size:11pt; }
 i.pic-left { font-size:9pt; margin-right:10px; margin-bottom:5px;}
 i.pic-right { font-size:9pt; margin-left:10px; margin-bottom:5px;}
 
-a:link { color:#FFFFFF; text-decoration:underline; }
+a { color:#FFFFFF; text-decoration:underline; }
 a:visited { color:#551A8B; text-decoration:underline; }
 a:active { color:#FF0000; text-decoration:none; }
 

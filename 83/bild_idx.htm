@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('comp.htm')" background="../blau.gif">
-<P><A HREF="comp.htm">Im Computerraum</A></P>
-<p><a href="rudern.htm">Vom Rudern</a></p>
-<p><a href="fasch.htm">Vom Schulfasching</a></p>
-<p><a href="bilder.htm">Weitere LTG-Logos</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ncomp.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ncomp.htm', '*')">Im Computerraum</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nrudern.htm', '*')">Vom Rudern</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">Vom Schulfasching</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder.htm', '*')">Weitere LTG-Logos</a></p>
 </body>
 </html>

@@ -7,8 +7,8 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('abi.htm')" background="../blau.gif">
-<P><A HREF="abi.htm">Abitur 1995</A></P>
-<P><A HREF="fasch.htm">LTG-Fasching</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nabi.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Abitur 1995</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">LTG-Fasching</A></P>
 </body>
 </html>

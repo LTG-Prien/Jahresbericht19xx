@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('bau.htm')" background="../blau.gif">
-<p><a href="bau.htm#1">Unser Schulgebäude</a></p>
-<p><a href="bau.htm#2">Bilder von der Einweihungsfeier</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nbau.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbau.htm#1', '*')">Unser Schulgebäude</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbau.htm#2', '*')">Bilder von der Einweihungsfeier</a></p>
 </body>
 </html>

@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<P><A HREF="smv.htm">SMV</A></P>
-<P><A HREF="smv2.htm">Schülerberichte</A></P>
-<P><A HREF="vorlese.htm">Lesewettbewerb</A></P>
-<P><A HREF="s_lese.htm">Schülerbücherei</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm', '*')">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv2.htm', '*')">Schülerberichte</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nvorlese.htm', '*')">Lesewettbewerb</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ns_lese.htm', '*')">Schülerbücherei</A></P>
 </body>
 </html>

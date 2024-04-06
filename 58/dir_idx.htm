@@ -9,19 +9,19 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('gesch.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#1">Schülerzahl und Klassenbildung</A></P>
-<P><A HREF="dir.htm#2">Verstaatlichung</A></P>
-<P><A HREF="dir.htm#3">Schülerheim</A></P>
-<P><A HREF="dir.htm#4">Reifeprüfung</A></P>
-<P><A HREF="dir.htm#6">Jugen-Rotkreuz</A></P>
-<P><A HREF="dir.htm#7">Schulsammlungen</A></P>
-<P><A HREF="dir.htm#8">Unsere Büchereien</A></P>
-<P><A HREF="dir.htm#9">Film - Lichtbild - Schallplatte - Tonband</A></P>
-<P><A HREF="dank.htm#1">Dank der Schule</A></P>
-<P><A HREF="dank.htm#2">Schlußbemerkungen</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngesch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Schülerzahl und Klassenbildung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">Verstaatlichung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#3', '*')">Schülerheim</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#4', '*')">Reifeprüfung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#6', '*')">Jugen-Rotkreuz</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#7', '*')">Schulsammlungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#8', '*')">Unsere Büchereien</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#9', '*')">Film - Lichtbild - Schallplatte - Tonband</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndank.htm#1', '*')">Dank der Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndank.htm#2', '*')">Schlußbemerkungen</A></P>
 <hr>
-<P><A HREF="gesch.htm">Zur Geschichte der Anstalt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Zur Geschichte der Anstalt</A></P>
 <p>&nbsp;</p>
 </body>
 </html>

@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('gesch.htm')" background="../blau.gif">
-<p><a href="gesch.htm">Aus der Geschichte der Schule</a></p>
-<p><a href="abi.htm">Reifeprüfung 1963</a></p>
-<p><a href="aufnahme.htm">Aufnahmeverfahren für die 1. Klasse</a></p>
-<p><a href="buecher.htm">Lehrerbücherei</a></p>
-<p><a href="dank.htm">Die Schule dankt</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngesch.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Aus der Geschichte der Schule</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Reifeprüfung 1963</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\naufnahme.htm', '*')">Aufnahmeverfahren für die 1. Klasse</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbuecher.htm', '*')">Lehrerbücherei</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndank.htm', '*')">Die Schule dankt</a></p>
 </body>
 </html>

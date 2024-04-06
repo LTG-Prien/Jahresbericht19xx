@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('fahrten1.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfahrten1.htm', '*')" background="../blau.gif">
 
-<P><A HREF="fahrten1.htm">K 12: Neapel und Sorrent</A></P>
-<P><A HREF="fahrten2.htm">K 12: Zwei Länder - Stationen einer Reise</A></P>
-<P><A HREF="austaus.htm#1">Austausch: Malahide</A></P>
-<P><A HREF="austaus.htm#2">Austausch mit Valdagno</A></P>
-<P><A HREF="deutsch.htm">Theaterfahrt des GK Deutsch</A></P>
-<P><A HREF="ski.htm">Skilager</A></P>
-<P><A HREF="fahr_kar.htm">Karikaturen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten1.htm', '*')">K 12: Neapel und Sorrent</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten2.htm', '*')">K 12: Zwei Länder - Stationen einer Reise</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustaus.htm#1', '*')">Austausch: Malahide</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustaus.htm#2', '*')">Austausch mit Valdagno</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm', '*')">Theaterfahrt des GK Deutsch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skilager</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahr_kar.htm', '*')">Karikaturen</A></P>
 </body>
 </html>

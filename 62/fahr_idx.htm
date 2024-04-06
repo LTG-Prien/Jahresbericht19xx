@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('studienf.htm')" background="../blau.gif">
-<P><A HREF="studienf.htm">Studienfahrt nach Südtirol</A></P>
-<P><A HREF="sport62.htm#X">Schikurs</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nstudienf.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm', '*')">Studienfahrt nach Südtirol</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport62.htm#X', '*')">Schikurs</A></P>
 
 </body>
 </html>

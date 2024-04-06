@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('schau.htm')" background="../blau.gif">
-<p><a href="schau.htm">Weihnachtsspiel</a></p>
-<p><a href="ausstell.htm">Zeichen- und Keramikausstellung</a></p>
-<p><a href="segeln.htm">Segellehrgang</a></p>
-<p><a href="tanzkurs.htm">Tanzkurs</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nschau.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschau.htm', '*')">Weihnachtsspiel</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nausstell.htm', '*')">Zeichen- und Keramikausstellung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsegeln.htm', '*')">Segellehrgang</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntanzkurs.htm', '*')">Tanzkurs</a></p>
 </body>
 </html>

@@ -8,15 +8,15 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('natwiss.htm')" background="../blau.gif">
-<P><A HREF="natwiss.htm">Die naturwissen-<br>schaftlichen Abteilungen berichten</A></P>
-<P><A HREF="reli62.htm">Religionslehre</A></P>
-<P><A HREF="sport62.htm">Sport</A></P>
-<P><A HREF="deutsch.htm">Themen der deutschen Schul- und Hausaufgaben</A></P>
-<P><A HREF="photo.htm">Photogruppe</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nnatwiss.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nnatwiss.htm', '*')">Die naturwissen-<br>schaftlichen Abteilungen berichten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli62.htm', '*')">Religionslehre</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport62.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm', '*')">Themen der deutschen Schul- und Hausaufgaben</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nphoto.htm', '*')">Photogruppe</A></P>
 <HR>
-<P><A HREF="thema.htm">Vortragsthemen und Buchbesprechungen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
-<P><A HREF="thema_01.htm">Studientage 9. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nthema.htm', '*')">Vortragsthemen und Buchbesprechungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nthema_01.htm', '*')">Studientage 9. Klasse</A></P>
 </body>
 </html>

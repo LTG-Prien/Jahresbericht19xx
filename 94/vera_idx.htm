@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('kz.htm')" background="../blau.gif">
-<p><a href="kz.htm">Ausstellung "Kinderzeichnungen aus dem KZ Theresienstadt"</a></p>
-<P><A HREF="tanzkurs.htm">Tanzkurs 9. Klassen</A></P>
-<P><A HREF="studient.htm">Studientag der 11. Klassen</A></P>
-<P><A HREF="musik94.htm">Musische Wochen</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nkz.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkz.htm', '*')">Ausstellung "Kinderzeichnungen aus dem KZ Theresienstadt"</a></p>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntanzkurs.htm', '*')">Tanzkurs 9. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientag der 11. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik94.htm', '*')">Musische Wochen</A></P>
 </body>
 </html>

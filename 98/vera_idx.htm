@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('andechs.htm')" background="../blau.gif">
-<P><A HREF="andechs.htm">1. Andechser Jugendforum</A></P>
-<P><A HREF="bootvoll.htm">"Ist das Boot voll?"</A></P>
-<P><A HREF="mittelst.htm">Mittelstufentheater</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nandechs.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nandechs.htm', '*')">1. Andechser Jugendforum</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbootvoll.htm', '*')">"Ist das Boot voll?"</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmittelst.htm', '*')">Mittelstufentheater</A></P>
 </body>
 </html>

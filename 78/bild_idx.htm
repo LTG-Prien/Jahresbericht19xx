@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('abi.htm')" background="../blau.gif">
-<p><a href="abi.htm">Abiturfeier 1979</a></p>
-<p><a href="weih.htm">Weihnachtsfeier</a></p>
-<p><a href="fasch.htm">Faschingsfeier</a></p>
-<p><a href="theater.htm">Theateraufführung: Gelähmte Schwingen</a></p>
-<p><a href="th_probe.htm">Theateraufführung: Proben</a></p>
-<p><a href="lstag.htm">Aktion "Letzter Schultag"</a></p>
-<p><a href="bilder.htm">Weitere Bilder</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nabi.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Abiturfeier 1979</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nweih.htm', '*')">Weihnachtsfeier</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">Faschingsfeier</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntheater.htm', '*')">Theateraufführung: Gelähmte Schwingen</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nth_probe.htm', '*')">Theateraufführung: Proben</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlstag.htm', '*')">Aktion "Letzter Schultag"</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder.htm', '*')">Weitere Bilder</a></p>
 </body>
 </html>

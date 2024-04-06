@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('p800.htm')" background="../blau.gif">
-<P><A HREF="p800.htm">800 Jahre Prien</A></P>
-<P><A HREF="abitur.htm">Absolvia 1958: Abschluﬂball</A></P>
-<P><A HREF="rudern.htm">Taufe der neuen Boote</A></P>
-<P><A HREF="fasch.htm">Bilder vom Schulfasching</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\np800.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\np800.htm', '*')">800 Jahre Prien</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabitur.htm', '*')">Absolvia 1958: Abschluﬂball</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nrudern.htm', '*')">Taufe der neuen Boote</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">Bilder vom Schulfasching</A></P>
 </body>
 </html>

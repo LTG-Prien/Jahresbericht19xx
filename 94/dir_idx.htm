@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#1">Das Umschlagbild und eine beeindruckende Ausstellung</A></P>
-<P><A HREF="dir.htm#2">LTG-Förderverein</A></P>
-<P><A HREF="dir.htm#3">Die Aula, von Glaswolle bis Solaranlage</A></P>
-<P><A HREF="dir.htm#4">Klassen- und Studienfahrten</A></P>
-<P><A HREF="dir.htm#5">Von Advent bis Zirkus</A></P>
-<P><A HREF="dir.htm#6">Alter und neuer MB</A></P>
-<P><A HREF="dir.htm#7">Wechsel im Kollegium</A></P>
-<P><A HREF="pers_02.htm">Zum Gedenken</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Das Umschlagbild und eine beeindruckende Ausstellung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">LTG-Förderverein</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#3', '*')">Die Aula, von Glaswolle bis Solaranlage</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#4', '*')">Klassen- und Studienfahrten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#5', '*')">Von Advent bis Zirkus</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#6', '*')">Alter und neuer MB</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#7', '*')">Wechsel im Kollegium</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers_02.htm', '*')">Zum Gedenken</A></P>
 </body>
 </html>

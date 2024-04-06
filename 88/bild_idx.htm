@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('fest.htm')" background="../blau.gif">
-<P><A HREF="fest.htm">40-Jahrfeier</A></P>
-<P><A HREF="fasch.htm">LTG-Fasching</A></P>
-<P><A HREF="l_theat.htm">Lehrertheater</A></P>
-<P><A HREF="b_volley.htm">Volleyball</A></P>
-<P><A HREF="b_sport.htm">Schulsportfest</A></P>
-<P><A HREF="b_sommer.htm">Sommerfest</A></P>
-<P><A HREF="b_weiter.htm">Weitere Bilder</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfest.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfest.htm', '*')">40-Jahrfeier</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">LTG-Fasching</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nl_theat.htm', '*')">Lehrertheater</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_volley.htm', '*')">Volleyball</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_sport.htm', '*')">Schulsportfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_sommer.htm', '*')">Sommerfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_weiter.htm', '*')">Weitere Bilder</A></P>
 </body>
 </html>

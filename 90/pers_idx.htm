@@ -9,18 +9,18 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('pers.htm')" background="../blau.gif">
-<P><A HREF="pers.htm#1">Lehrerfoto</A></P>
-<P><A HREF="pers.htm#2">Lehrkräfte und Verwaltung</A></P>
-<P><A HREF="pers.htm#3">Ernennungen</A></P>
-<P><A HREF="pers.htm#4">Personalrat</A></P>
-<P><A HREF="pers.htm#5">Verwaltungspersonal</A></P>
-<P><A HREF="pers.htm#6">Hauspersonal</A></P>
-<P><A HREF="pers.htm#9">Elternbeirat</A></P>
-<P><A HREF="pers.htm#10">Schulforum</A></P>
-<P><A HREF="pers.htm#11">Förderverein</A></P>
-<P><A HREF="pers.htm#12">Klassensprecher</A></P>
-<P><A HREF="pers.htm#13">Schülersprecher</A></P>
-<P><A HREF="pers01.htm">Zum Gedenken</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\npers.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#1', '*')">Lehrerfoto</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#2', '*')">Lehrkräfte und Verwaltung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#3', '*')">Ernennungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#4', '*')">Personalrat</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#5', '*')">Verwaltungspersonal</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#6', '*')">Hauspersonal</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#9', '*')">Elternbeirat</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#10', '*')">Schulforum</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#11', '*')">Förderverein</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#12', '*')">Klassensprecher</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers.htm#13', '*')">Schülersprecher</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers01.htm', '*')">Zum Gedenken</A></P>
 </body>
 </html>

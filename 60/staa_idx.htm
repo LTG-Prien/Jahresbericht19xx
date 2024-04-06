@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('verstaat.htm')" background="../blau.gif">
-<p><a href="verstaat.htm">Verstaatlichung</a></p>
-<p><a href="verstat1.htm">Feier der Verstaatlichung</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nverstaat.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nverstaat.htm', '*')">Verstaatlichung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nverstat1.htm', '*')">Feier der Verstaatlichung</a></p>
 </body>
 </html>

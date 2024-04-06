@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<P><A HREF="smv.htm#1">SMV</A></P>
-<P><A HREF="smv.htm#2">Unsere Schülerzeitung</A></P>
-<P><A HREF="sonst.htm">Caritative Arbeit unserer Heimschüler</A></P>
-<P><A HREF="gesund.htm">Gesundheitliche Überwachung</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#1', '*')">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#2', '*')">Unsere Schülerzeitung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsonst.htm', '*')">Caritative Arbeit unserer Heimschüler</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesund.htm', '*')">Gesundheitliche Überwachung</A></P>
 </body>
 </html>

@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('sport59.htm')" background="../blau.gif">
-<p><a href="kunst59.htm">Kunsterziehung</a></p>
-<p><a href="handarbe.htm">Handarbeit</a></p>
-<p><a href="sport59.htm">Leibeserziehung</a></p>
-<p><a href="reli59.htm">Religiöse Erziehung</a></p>
-<p><a href="deutsch.htm">Themen der deutschen Schul- und Hausaufgaben</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport59.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkunst59.htm', '*')">Kunsterziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nhandarbe.htm', '*')">Handarbeit</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport59.htm', '*')">Leibeserziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli59.htm', '*')">Religiöse Erziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm', '*')">Themen der deutschen Schul- und Hausaufgaben</a></p>
 <hr>
-<p><a href="lektuere.htm">Lesestoffe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</a></p>
 </body>
 </html>

@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir_treff.htm')" background="../blau.gif">
-<P><A HREF="dir_treff.htm">Sommertreffen der Direktoren von Oberbayern-Ost</A></P>
-<P><A HREF="musik93.htm">Veranstaltungen der Musiker</A></P>
-<P><A HREF="studient.htm">Studientag der 11. Klassen</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir_treff.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir_treff.htm', '*')">Sommertreffen der Direktoren von Oberbayern-Ost</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik93.htm', '*')">Veranstaltungen der Musiker</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientag der 11. Klassen</A></P>
 </body>
 </html>

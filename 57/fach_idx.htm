@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('deutsch.htm#3')" background="../blau.gif">
-<p><a href="kunst57.htm">Kunsterziehung</a></p>
-<p><a href="sport57.htm">Leibeserziehung</a></p>
-<p><a href="reli57.htm">Religiöse Erziehung</a></p>
-<p><a href="deutsch.htm#1">Themen der deutschen Schul- und Hausaufgaben</a></p>
-<p><a href="deutsch.htm#2">Schülervorträge im Rahmen des Unterrichts</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndeutsch.htm#3', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkunst57.htm', '*')">Kunsterziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport57.htm', '*')">Leibeserziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli57.htm', '*')">Religiöse Erziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm#1', '*')">Themen der deutschen Schul- und Hausaufgaben</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm#2', '*')">Schülervorträge im Rahmen des Unterrichts</a></p>
 <hr>
-<p><a href="reifeprf.htm">Reifeprüfungsaufgaben 1958</a></p>
-<p><a href="lektuere.htm">Lesestoffe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreifeprf.htm', '*')">Reifeprüfungsaufgaben 1958</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</a></p>
 </body>
 </html>

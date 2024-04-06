@@ -9,12 +9,12 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('sport78.htm')" background="../blau.gif">
-<P><A HREF="sport78.htm">Sport</A></P>
-<P><A HREF="reli78.htm">Religion</A></P>
-<P><A HREF="musik78.htm">Musik</A></P>
-<p><a href="deut_fa.htm">Deutsch</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport78.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport78.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli78.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik78.htm', '*')">Musik</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeut_fa.htm', '*')">Deutsch</a></p>
 <hr>
-<P><A HREF="lektuere.htm">Lesestoffe</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</A></P>
 </body>
 </html>

@@ -9,17 +9,17 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('facharbe.htm')" background="../blau.gif">
-<P><A HREF="musik93.htm">Musik</A></P>
-<P><A HREF="reli93.htm">Religion</A></P>
-<P><A HREF="schulspi.htm#1">Schulspiel</A></P>
-<P><A HREF="physik93.htm">Physik</A></P>
-<P><A HREF="sport93.htm">Sport</A></P>
-<P><A HREF="wirt93.htm">Wirtschaft/Recht</A></P>
-<P><A HREF="schulspi.htm#2">AG Umwelt</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfacharbe.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik93.htm', '*')">Musik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli93.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm#1', '*')">Schulspiel</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nphysik93.htm', '*')">Physik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport93.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwirt93.htm', '*')">Wirtschaft/Recht</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm#2', '*')">AG Umwelt</A></P>
 <HR>
-<P><A HREF="lk12.htm">Leistungskurse</A></P>
-<P><A HREF="facharbe.htm">Facharbeitsthemen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlk12.htm', '*')">Leistungskurse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfacharbe.htm', '*')">Facharbeitsthemen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('sport72.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport72.htm', '*')" background="../blau.gif">
 
-<P><A HREF="sport72.htm">Sport</A></P>
-<P><A HREF="lektuer2.htm">Themen der Deutschen Schul- und Hausaufgaben</A></P>
-<P><A HREF="lektuere.htm#1">Lesestoffe</A></P>
-<p><a href="sprachf.htm">Sprachenferien - aber wie?"</a></p>
-<P><A HREF="lektuere.htm#2">Fremdsprach-<br>liche Klassen-<br>lektüre</A></P>
-<P><A HREF="studient.htm">Studientage</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport72.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuer2.htm', '*')">Themen der Deutschen Schul- und Hausaufgaben</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm#1', '*')">Lesestoffe</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsprachf.htm', '*')">Sprachenferien - aber wie?"</a></p>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm#2', '*')">Fremdsprach-<br>liche Klassen-<br>lektüre</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientage</A></P>
 </body>
 </html>

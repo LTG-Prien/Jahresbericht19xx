@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('sport56.htm')" background="../blau.gif">
-<p><a href="kunst56.htm">Kunsterziehung</a></p>
-<p><a href="sport56.htm">Leibeserziehung</a></p>
-<p><a href="reli56.htm">Religiöse Erziehung</a></p>
-<p><a href="agfoto.htm">Foto-Arbeits-<br>gemeinschaft</a></p>
-<p><a href="deutsch.htm#1">Themen der deutschen Schul- und Hausaufgaben</a></p>
-<p><a href="deutsch.htm#2">Schülervorträge im Rahmen des Unterrichts</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport56.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkunst56.htm', '*')">Kunsterziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport56.htm', '*')">Leibeserziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli56.htm', '*')">Religiöse Erziehung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nagfoto.htm', '*')">Foto-Arbeits-<br>gemeinschaft</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm#1', '*')">Themen der deutschen Schul- und Hausaufgaben</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm#2', '*')">Schülervorträge im Rahmen des Unterrichts</a></p>
 <hr>
-<p><a href="lektuere.htm">Lesestoffe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</a></p>
 </body>
 </html>

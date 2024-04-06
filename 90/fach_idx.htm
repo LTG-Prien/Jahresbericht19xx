@@ -9,15 +9,15 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('reli90.htm')" background="../blau.gif">
-<P><A HREF="reli90.htm">Religion</A></P>
-<P><A HREF="th_fahrt.htm">Deutsch</A></P>
-<P><A HREF="th_fahrt.htm">Englisch</A></P>
-<P><A HREF="schulspi.htm">Schulspiel</A></P>
-<P><A HREF="sport90.htm">Sport</A></P>
-<P><A HREF="umwelt.htm">AG Umwelt</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nreli90.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli90.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nth_fahrt.htm', '*')">Deutsch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nth_fahrt.htm', '*')">Englisch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm', '*')">Schulspiel</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport90.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\numwelt.htm', '*')">AG Umwelt</A></P>
 
 <HR>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

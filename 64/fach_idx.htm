@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('deutsch.htm')" background="../blau.gif">
-<P><A HREF="reli64.htm">Religionslehre</A></P>
-<P><A HREF="sport64.htm">Sport</A></P>
-<P><A HREF="deutsch.htm">Themen der deutschen Schul- und Hausaufgaben</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndeutsch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli64.htm', '*')">Religionslehre</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport64.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm', '*')">Themen der deutschen Schul- und Hausaufgaben</A></P>
 <HR>
-<P><A HREF="verkehr.htm">Verkehrsunterricht</A></P>
-<P><A HREF="thema.htm">Vortragsthemen, Buchbesprechungen, Gedicht- und Prosadeutungen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nverkehr.htm', '*')">Verkehrsunterricht</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nthema.htm', '*')">Vortragsthemen, Buchbesprechungen, Gedicht- und Prosadeutungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

@@ -8,16 +8,16 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('lektuere.htm')" background="../blau.gif">
-<P><A HREF="reli71.htm">Religion</A></P>
-<P><A HREF="schulspi.htm">Schulspiel</A></P>
-<p><a href="themen.htm">Themen der deutschen Schul- und Hausaufgaben</a></p>
-<p><a href="verkehrs.htm">Verkehrserziehung</p>
-<p><a href="politik.htm">Politische Bildung</p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nlektuere.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli71.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm', '*')">Schulspiel</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nthemen.htm', '*')">Themen der deutschen Schul- und Hausaufgaben</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nverkehrs.htm', '*')">Verkehrserziehung</p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\npolitik.htm', '*')">Politische Bildung</p>
 <hr>
-<P><A HREF="u-mittel.htm">Unterrichtsmittel</A></P>
-<P><A HREF="studient.htm">Studientage</A></P>
-<p><a href="lektuere.htm">Lesestoffe</a></p>
-<p><a href="prog_unt.htm">Programmierter Unterricht</a></p>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nu-mittel.htm', '*')">Unterrichtsmittel</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientage</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nprog_unt.htm', '*')">Programmierter Unterricht</a></p>
 </body>
 </html>

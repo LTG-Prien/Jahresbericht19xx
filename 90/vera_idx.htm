@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('schulspi.htm')" background="../blau.gif">
-<P><A HREF="schulspi.htm#1">Von Till Eulenspiegel bis Mackie Messer</A></P>
-<P><A HREF="schulspi.htm#2">Neigungsgruppe "Darstellendes Spiel"</A></P>
-<P><A HREF="vorlesew.htm">Vorlesewettbewerb</A></P>
-<P><A HREF="feierst.htm">Feierstunde zur Wiedervereinigung</A></P>
-<P><A HREF="drogen90.htm">Zur Drogenprävention</A></P>
-<P><A HREF="zeitung.htm">Zeitungsberichte</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nschulspi.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm#1', '*')">Von Till Eulenspiegel bis Mackie Messer</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm#2', '*')">Neigungsgruppe "Darstellendes Spiel"</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nvorlesew.htm', '*')">Vorlesewettbewerb</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfeierst.htm', '*')">Feierstunde zur Wiedervereinigung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndrogen90.htm', '*')">Zur Drogenprävention</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nzeitung.htm', '*')">Zeitungsberichte</A></P>
 
 </body>
 </html>

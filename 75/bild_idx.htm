@@ -9,11 +9,11 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('fasch75.htm')" background="../blau.gif">
-<p><a href="fasch75.htm">Fasching</a></p>
-<p><a href="b_sport.htm">Sport</a></p>
-<p><a href="b_musik.htm">Musik</a></p>
-<p><a href="b_kunst.htm">Kunst</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfasch75.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch75.htm', '*')">Fasching</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_sport.htm', '*')">Sport</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_musik.htm', '*')">Musik</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_kunst.htm', '*')">Kunst</a></p>
 
 </body>
 </html>

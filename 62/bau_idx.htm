@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('neubau.htm')" background="../blau.gif">
-<P><A HREF="neubau.htm#1">10. Oktober 1962</A></P>
-<P><A HREF="neubau.htm#2">Einweihung Bauabschnitt II: Feierstunde</A></P>
-<P><A HREF="feier.htm">Weitere Bilder von der Feierstunde</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nneubau.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nneubau.htm#1', '*')">10. Oktober 1962</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nneubau.htm#2', '*')">Einweihung Bauabschnitt II: Feierstunde</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfeier.htm', '*')">Weitere Bilder von der Feierstunde</A></P>
 </body>
 </html>

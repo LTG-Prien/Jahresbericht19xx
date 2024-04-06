@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<P><A HREF="smv.htm#1">SMV</A></P>
-<P><A HREF="smv.htm#2">Schülerzeitung: Kaktus</A></P>
-<P><A HREF="smv.htm#3">Elternbeirat</A></P>
-<P><A HREF="berufswa.htm">Berufsberatung</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#1', '*')">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#2', '*')">Schülerzeitung: Kaktus</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#3', '*')">Elternbeirat</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nberufswa.htm', '*')">Berufsberatung</A></P>
 </body>
 </html>

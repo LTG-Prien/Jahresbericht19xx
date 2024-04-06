@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('schulfes.htm')" background="../blau.gif">
-<P><A HREF="schulfes.htm">Schulfest</A></P>
-<P><A HREF="musik82.htm#X">Weihnachtliches Musizieren</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nschulfes.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulfes.htm', '*')">Schulfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik82.htm#X', '*')">Weihnachtliches Musizieren</A></P>
 </body>
 </html>

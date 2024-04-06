@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('theater.htm')" background="../blau.gif">
-<p><a href="theater.htm">Theaterfahrten</a></p>
-<p><a href="graulhet.htm">Schüleraustausch mit Graulhet</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ntheater.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntheater.htm', '*')">Theaterfahrten</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngraulhet.htm', '*')">Schüleraustausch mit Graulhet</a></p>
 </body>
 </html>

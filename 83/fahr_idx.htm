@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('studienf.htm#1')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nstudienf.htm#1', '*')" background="../blau.gif">
 
-<P><A HREF="studienf.htm#1">LK Französisch in Paris</A></P>
-<P><A HREF="studienf.htm#2">Englandreise des LK Englisch</A></P>
-<P><A HREF="studienf.htm#3">LK Physik u. LK Chemie in Mannheim</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm#1', '*')">LK Französisch in Paris</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm#2', '*')">Englandreise des LK Englisch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm#3', '*')">LK Physik u. LK Chemie in Mannheim</A></P>
 </body>
 </html>

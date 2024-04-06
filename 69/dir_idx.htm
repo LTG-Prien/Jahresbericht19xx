@@ -8,12 +8,12 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm">Das Ludwig-Thoma-Gymnasium wächst</A></P>
-<P><A HREF="gesch.htm">Aus der Geschichte der Schule</A></P>
-<P><A HREF="aufnahme.htm">Aufnahme in die fünfte Klasse</A></P>
-<P><A HREF="reifeprf.htm">Reifeprüfung 1970</A></P>
-<P><A HREF="abi69.htm">Verabschiedung der Abiturienten</A></P>
-<P><A HREF="dank.htm">Rückschau - Dank - Vorschau</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">Das Ludwig-Thoma-Gymnasium wächst</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Aus der Geschichte der Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naufnahme.htm', '*')">Aufnahme in die fünfte Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreifeprf.htm', '*')">Reifeprüfung 1970</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi69.htm', '*')">Verabschiedung der Abiturienten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndank.htm', '*')">Rückschau - Dank - Vorschau</A></P>
 </body>
 </html>

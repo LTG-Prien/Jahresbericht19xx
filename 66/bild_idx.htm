@@ -8,12 +8,12 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('feier.htm')" background="../blau.gif">
-<P><A HREF="feier.htm">Feierstunde zum 100. Geburtstag von Ludwig Thoma</A></P>
-<P><A HREF="laus.htm">Lehrerausflug</A></P>
-<P><A HREF="heim.htm">Aus dem Schülerheim</A></P>
-<P><A HREF="hebfeier.htm">Hebefeier: 3. Trakt</A></P>
-<P><A HREF="b_sport.htm">Sportliches</A></P>
-<P><A HREF="weihnach.htm">Weihnacht am LTG</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfeier.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfeier.htm', '*')">Feierstunde zum 100. Geburtstag von Ludwig Thoma</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlaus.htm', '*')">Lehrerausflug</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nheim.htm', '*')">Aus dem Schülerheim</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nhebfeier.htm', '*')">Hebefeier: 3. Trakt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_sport.htm', '*')">Sportliches</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nweihnach.htm', '*')">Weihnacht am LTG</A></P>
 </body>
 </html>

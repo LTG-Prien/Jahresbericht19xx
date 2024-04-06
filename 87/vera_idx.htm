@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('mus_woch.htm')" background="../blau.gif">
-<P><A HREF="mus_woch.htm">Musische Wochen in Graulhet</A></P>
-<p><a href="hausmus.htm">Tag der Hausmusik</a></p>
-<p><a href="mari.htm">Marionettentheater</a></p>
-<p><a href="buecher.htm#1">Bücherausstellung</a></p>
-<p><a href="buecher.htm#2">Vorlesewettbewerb</a></p>
-<p><a href="buecher.htm#3">Othmar Franz Lang am LTG</a></p>
-<p><a href="studient.htm">Studientage der 11. Klassen</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nmus_woch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmus_woch.htm', '*')">Musische Wochen in Graulhet</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nhausmus.htm', '*')">Tag der Hausmusik</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmari.htm', '*')">Marionettentheater</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbuecher.htm#1', '*')">Bücherausstellung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbuecher.htm#2', '*')">Vorlesewettbewerb</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbuecher.htm#3', '*')">Othmar Franz Lang am LTG</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientage der 11. Klassen</a></p>
 </body>
 </html>

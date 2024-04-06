@@ -8,19 +8,19 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#1">Klassenbildung und Schülerzahl</A></P>
-<P><A HREF="dir.htm#2">Überwindung der Raumnot</A></P>
-<P><A HREF="dir.htm#3">Unser Schülerheim</A></P>
-<P><A HREF="dir.htm#4">Schülerübungen</A></P>
-<P><A HREF="dir.htm#6">Reifeprüfung</A></P>
-<P><A HREF="dir.htm#7">Jugen-Rotkreuz</A></P>
-<P><A HREF="dir.htm#5">Schulsammlungen</A></P>
-<P><A HREF="dir.htm#8">Unsere Büchereien</A></P>
-<P><A HREF="dir2.htm#1">Dank der Schule</A></P>
-<P><A HREF="dir2.htm#2">Das neue Schuljahr</A></P>
-<p><a href="dir3.htm">Aus Schule und Heim</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Klassenbildung und Schülerzahl</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">Überwindung der Raumnot</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#3', '*')">Unser Schülerheim</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#4', '*')">Schülerübungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#6', '*')">Reifeprüfung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#7', '*')">Jugen-Rotkreuz</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#5', '*')">Schulsammlungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#8', '*')">Unsere Büchereien</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm#1', '*')">Dank der Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm#2', '*')">Das neue Schuljahr</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir3.htm', '*')">Aus Schule und Heim</a></p>
 <hr>
-<P><A HREF="s_gesch.htm">Zur Geschichte der Anstalt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ns_gesch.htm', '*')">Zur Geschichte der Anstalt</A></P>
 </body>
 </html>

@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<p><a href="smv.htm#1">Elternvereinigung 1949-1976</a></p>
-<p><a href="smv.htm#2">Elternbeirat</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#1', '*')">Elternvereinigung 1949-1976</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#2', '*')">Elternbeirat</a></p>
 </body>
 </html>

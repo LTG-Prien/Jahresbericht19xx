@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('graulhet.htm')" background="../blau.gif">
-<P><A HREF="graulhet.htm">Graulhet</A></P>
-<P><A HREF="studienf.htm">LK Latein und Biologie in Österreich</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngraulhet.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngraulhet.htm', '*')">Graulhet</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm', '*')">LK Latein und Biologie in Österreich</A></P>
 </body>
 </html>

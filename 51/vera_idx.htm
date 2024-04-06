@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('sport.htm')" background="../blau.gif">
-<p><a href="ski.htm">Skikurs im März 1952</a></p>
-<p><a href="sport.htm">Schulsportfest im Eichental im Juni 1952</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skikurs im März 1952</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport.htm', '*')">Schulsportfest im Eichental im Juni 1952</a></p>
 </body>
 </html>

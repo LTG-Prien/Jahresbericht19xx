@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('theater.htm')" background="../blau.gif">
-<P><A HREF="theater.htm">Theater am LTG</A></P>
-<P><A HREF="studient.htm#1">Studientage der 12. Klasse</A></P>
-<P><A HREF="studient.htm#2">Studientage der 13. Klasse</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ntheater.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntheater.htm', '*')">Theater am LTG</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm#1', '*')">Studientage der 12. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm#2', '*')">Studientage der 13. Klasse</A></P>
 </body>
 </html>

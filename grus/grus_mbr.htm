@@ -9,7 +9,7 @@
 <!--
 function idx_load()
 {
-  top.frames.leftmenu.location.href="grus_idx.htm";
+	window.top.postMessage('load_grus_idx\n'+window.location, '*')
 }
 //--></SCRIPT>
 </head>

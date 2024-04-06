@@ -10,7 +10,7 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm">Am Ende des Schuljahres</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">Am Ende des Schuljahres</A></P>
 </body>
 </html>

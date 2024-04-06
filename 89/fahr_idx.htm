@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('fahrten.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfahrten.htm', '*')" background="../blau.gif">
 
-<P><A HREF="fahrten.htm#1">Studienfahrt der K 12: London 1990</A></P>
-<P><A HREF="fahrten.htm#2">Orchester und Chor in Rom</A></P>
-<P><A HREF="austausc.htm#1">Vom Snake River zum Mississippi</A></P>
-<P><A HREF="austausc.htm#2">Irland-Austausch</A></P>
-<P><A HREF="austausc.htm#3">Auslandsaufenthalte unserer Schüler</A></P>
-<P><A HREF="austausc.htm#4">Austausch mit Graulhet</A></P>
-<P><A HREF="ski.htm">Skilager</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten.htm#1', '*')">Studienfahrt der K 12: London 1990</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten.htm#2', '*')">Orchester und Chor in Rom</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#1', '*')">Vom Snake River zum Mississippi</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#2', '*')">Irland-Austausch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#3', '*')">Auslandsaufenthalte unserer Schüler</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#4', '*')">Austausch mit Graulhet</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skilager</A></P>
 </body>
 </html>

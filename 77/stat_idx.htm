@@ -8,7 +8,7 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('stat.htm')" background="../blau.gif">
-<P><A HREF="stat.htm">Schülerzahlen</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nstat.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstat.htm', '*')">Schülerzahlen</A></P>
 </body>
 </html>

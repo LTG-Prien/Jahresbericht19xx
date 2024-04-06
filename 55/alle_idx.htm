@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv55.htm')" background="../blau.gif">
-<P><A HREF="smv55.htm#1">Schülerbriefwechsel und Schüleraustausch</A></P>
-<P><A HREF="smv55.htm#2">Gesundheitliche Überwachung</A></P>
-<P><A HREF="smv55.htm#3">Ausbildungsbeihilfen</A></P>
-<P><A HREF="smv55.htm#4">Elternhaus und Schule</A></P>
-<P><A HREF="smv55.htm#5">SMV</A></P>
-<p><a href="heim.htm">Schülerheime</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv55.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv55.htm#1', '*')">Schülerbriefwechsel und Schüleraustausch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv55.htm#2', '*')">Gesundheitliche Überwachung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv55.htm#3', '*')">Ausbildungsbeihilfen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv55.htm#4', '*')">Elternhaus und Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv55.htm#5', '*')">SMV</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nheim.htm', '*')">Schülerheime</a></p>
 
 </body>
 </html>

@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('musik85.htm#2')" background="../blau.gif">
-<P><A HREF="musik85.htm#2">Studienreise mit Tourneecharakter</A></P>
-<p><a href="marionet.htm">Marionettentheater</a></p>
-<p><a href="studient.htm">Studientag der 11. Jahrgangsstufe</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nmusik85.htm#2', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik85.htm#2', '*')">Studienreise mit Tourneecharakter</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmarionet.htm', '*')">Marionettentheater</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientag der 11. Jahrgangsstufe</a></p>
 </body>
 </html>

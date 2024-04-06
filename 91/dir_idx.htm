@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#1">Zum Schuljahr</A></P>
-<P><A HREF="dir.htm#2">AG Umwelt</A></P>
-<P><A HREF="dir.htm#3">Sport, Musik und Theater</A></P>
-<P><A HREF="dir.htm#4">SMV und Tutoren</A></P>
-<P><A HREF="dir.htm#5">Elternbeirat</A></P>
-<P><A HREF="dir.htm#6">Zum Gedenken</A></P>
-<p><a href="dir_abi.htm">Abitur 1992: Rede des Schulleiters</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Zum Schuljahr</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">AG Umwelt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#3', '*')">Sport, Musik und Theater</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#4', '*')">SMV und Tutoren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#5', '*')">Elternbeirat</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#6', '*')">Zum Gedenken</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir_abi.htm', '*')">Abitur 1992: Rede des Schulleiters</a></p>
 </body>
 </html>

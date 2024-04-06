@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('fahrten.htm')" background="../blau.gif">
-<P><A HREF="fahrten.htm#1">Fahrt der Klasse 11 a</A></P>
-<P><A HREF="fahrten.htm#2">Unser Klassenausflug ins Berchtesgadner Land</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfahrten.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten.htm#1', '*')">Fahrt der Klasse 11 a</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrten.htm#2', '*')">Unser Klassenausflug ins Berchtesgadner Land</A></P>
 </body>
 </html>

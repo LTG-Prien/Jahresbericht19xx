@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('s_gesch.htm')" background="../blau.gif">
-<p><a href="s_gesch.htm">Aus der Geschichte der Schule</a></p>
-<p><a href="abi.htm">Reifeprüfung 1962</a></p>
-<p><a href="dir.htm#1">Schülerzahl und Klassenbildung</a></p>
-<p><a href="dir.htm#2">Aufnahmeverfahren für die 1. Klasse</a></p>
-<p><a href="buecher.htm">Lehrerbücherei</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ns_gesch.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ns_gesch.htm', '*')">Aus der Geschichte der Schule</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Reifeprüfung 1962</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Schülerzahl und Klassenbildung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">Aufnahmeverfahren für die 1. Klasse</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbuecher.htm', '*')">Lehrerbücherei</a></p>
 </body>
 </html>

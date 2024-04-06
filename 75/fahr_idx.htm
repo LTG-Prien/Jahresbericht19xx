@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('austausc.htm')" background="../blau.gif">
-<p><a href="austausc.htm#1">Schüleraustausch mit dem Collège d' Education Secondaire Louis Pasteur</a></p>
-<p><a href="austausc.htm#2">Unsere Schüler 1976 in Graulhet</a></p>
-<p><a href="austausc.htm#4">Besuch aus Graulhet</a></p>
-<p><a href="austausc.htm#3">Angebot eines Schüleraustausches mit Großbritannien</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\naustausc.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#1', '*')">Schüleraustausch mit dem Collège d' Education Secondaire Louis Pasteur</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#2', '*')">Unsere Schüler 1976 in Graulhet</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#4', '*')">Besuch aus Graulhet</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#3', '*')">Angebot eines Schüleraustausches mit Großbritannien</a></p>
 </body>
 </html>

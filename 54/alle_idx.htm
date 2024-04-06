@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv54.htm')" background="../blau.gif">
-<P><A HREF="smv54.htm#1">Gesundheitliche
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv54.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv54.htm#1', '*')">Gesundheitliche
 Überwachung</A></P>
-<P><A HREF="smv54.htm#2">Schülerfürsorge -
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv54.htm#2', '*')">Schülerfürsorge -
 Ausbildungsbeihilfen</A></P>
-<P><A HREF="smv54.htm#3">Schülerbriefwechsel und
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv54.htm#3', '*')">Schülerbriefwechsel und
 Schüleraustausch</A></P>
-<P><A HREF="smv54.htm#4">Elternhaus und Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv54.htm#4', '*')">Elternhaus und Schule</A></P>
 
 
 </body>

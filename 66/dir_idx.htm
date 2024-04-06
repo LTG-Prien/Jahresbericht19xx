@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('gesch.htm')" background="../blau.gif">
-<p><a href="gesch.htm">Aus der Geschichte der Schule</a></p>
-<p><a href="dir.htm">"Nun zu guter Letzt ..."</a></p>
-<p><a href="abi.htm">Reifeprüfung 1967</a></p>
-<p><a href="dir2.htm">Aufnahmeprüfung</a></p>
-<p><a href="gesundh.htm">Gesundheitswesen</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngesch.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Aus der Geschichte der Schule</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">"Nun zu guter Letzt ..."</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Reifeprüfung 1967</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm', '*')">Aufnahmeprüfung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesundh.htm', '*')">Gesundheitswesen</a></p>
 </body>
 </html>

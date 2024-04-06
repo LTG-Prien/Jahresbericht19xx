@@ -7,10 +7,10 @@
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('fasch.htm')" background="../blau.gif">
-<P><A HREF="fasch.htm">LTG-Fasching</A></P>
-<P><A HREF="feju.htm">Fest der Jugend</A></P>
-<P><A HREF="alltag.htm">Alltag am LTG</A></P>
-<p><a href="bilder.htm">Aus dem Kunstunterricht</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfasch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">LTG-Fasching</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfeju.htm', '*')">Fest der Jugend</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nalltag.htm', '*')">Alltag am LTG</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder.htm', '*')">Aus dem Kunstunterricht</a></p>
 </body>
 </html>

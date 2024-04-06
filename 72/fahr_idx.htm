@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('gesch.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngesch.htm', '*')" background="../blau.gif">
 
-<P><A HREF="gesch.htm">Aus der Geschichte der Schule</A></P>
-<P><A HREF="chiemgau.htm#1">Die Herkunft des Namens "Chiemsee"</A></P>
-<P><A HREF="chiemgau.htm#2">Frühgeschichtliche Kulturtafel des Chiemgaus</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Aus der Geschichte der Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchiemgau.htm#1', '*')">Die Herkunft des Namens "Chiemsee"</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchiemgau.htm#2', '*')">Frühgeschichtliche Kulturtafel des Chiemgaus</A></P>
 </body>
 </html>

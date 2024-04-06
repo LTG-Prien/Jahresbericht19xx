@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('fasch.htm')" background="../blau.gif">
-<p><a href="fasch.htm">Schulfasching</a></p>
-<p><a href="fthe.htm">Faschingsveranstaltung der Kleinen Theatergruppe</a></p>
-<p><a href="b_pers.htm">Bilder vom "Personal"</a></p>
-<p><a href="sfest.htm">Schulfest</a></p>
-<p><a href="musiker.htm">Musiker</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfasch.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">Schulfasching</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfthe.htm', '*')">Faschingsveranstaltung der Kleinen Theatergruppe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_pers.htm', '*')">Bilder vom "Personal"</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsfest.htm', '*')">Schulfest</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusiker.htm', '*')">Musiker</a></p>
 </body>
 </html>

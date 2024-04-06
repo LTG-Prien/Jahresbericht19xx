@@ -14,21 +14,9 @@ content="text/html; charset=iso-8859-1">
   }
 </style>
 <script>
-  function load(a, x) {
-      if (x === "not") {
-          document.querySelector('select[name="Auswahl"]').blur();
-          return;
-      } else {
-          if (a === 1) {
-              document.getElementById('auswahl2').src = x + '/' + x + '_mbr.htm';
-              document.getElementById('leftmenu').src = "blau.htm";
-              document.getElementById('info').src = x + '/' + x + '_inf.htm';
-          } else {
-              document.getElementById('leftmenu').src = x;
-          }
-          document.querySelector('select[name="Auswahl"]').blur();
-      }
-  }
+function load(a, x) {
+	window.top.postMessage('load\n'+window.location+'\n'+a+'\n'+x, '*')
+}
 </script>
 </head>
 

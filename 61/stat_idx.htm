@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('stat.htm')" background="../blau.gif">
-<P><A HREF="stat.htm#1">Schülerzahlen</A></P>
-<P><A HREF="stat.htm#2">Örtliche Herkunft</A></P>
-<P><A HREF="stat_02.htm">Wahlunterricht und AGs</A></P>
-<P><A HREF="abi.htm#X">Berufswünsche der Abiturienten</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nstat.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstat.htm#1', '*')">Schülerzahlen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstat.htm#2', '*')">Örtliche Herkunft</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstat_02.htm', '*')">Wahlunterricht und AGs</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm#X', '*')">Berufswünsche der Abiturienten</A></P>
 </body>
 </html>

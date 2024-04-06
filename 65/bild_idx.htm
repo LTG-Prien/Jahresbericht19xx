@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('fasch.htm')" background="../blau.gif">
-<P><A HREF="fasch.htm">LTG-Fasching</A></P>
-<p><a href="graulhet.htm">Besuch aus Graulhet</a></p>
-<p><a href="rudern.htm">Bilder vom Rudern</a></p>
-<p><a href="eltern.htm">Elternvereinigung und Internat</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfasch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">LTG-Fasching</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngraulhet.htm', '*')">Besuch aus Graulhet</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nrudern.htm', '*')">Bilder vom Rudern</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\neltern.htm', '*')">Elternvereinigung und Internat</a></p>
 </body>
 </html>

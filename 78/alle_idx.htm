@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<p><a href="smv.htm">SMV</a></p>
-<p><a href="smv2.htm#1">Elternbeirat</a></p>
-<p><a href="smv2.htm#3">Schulärztliche Tätigkeit</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm', '*')">SMV</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv2.htm#1', '*')">Elternbeirat</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv2.htm#3', '*')">Schulärztliche Tätigkeit</a></p>
 </body>
 </html>

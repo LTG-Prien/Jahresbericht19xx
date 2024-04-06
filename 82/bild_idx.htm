@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('pers_01.htm')" background="../blau.gif">
-<P><A HREF="pers_01.htm">30 Jahre BPhV</A></P>
-<p><a href="rudern.htm">25 Jahre Schülerruderverein und Bootstaufe am 30.4.83</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\npers_01.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\npers_01.htm', '*')">30 Jahre BPhV</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nrudern.htm', '*')">25 Jahre Schülerruderverein und Bootstaufe am 30.4.83</a></p>
 </body>
 </html>

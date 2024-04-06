@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm">Zum Schuljahr</A></P>
-<P><A HREF="dir2.htm">"Wir hatten heute bloß Vertretung"</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">Zum Schuljahr</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm', '*')">"Wir hatten heute bloß Vertretung"</A></P>
 </body>
 </html>

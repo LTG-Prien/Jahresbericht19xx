@@ -9,14 +9,14 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('sport94.htm')" background="../blau.gif">
-<P><A HREF="sport94.htm">Sport</A></P>
-<P><A HREF="reli94.htm">Religion</A></P>
-<P><A HREF="wirt94.htm">Wirtschaft/Recht</A></P>
-<P><A HREF="drama94.htm">Dramatisches Gestalten</A></P>
-<P><A HREF="musik94.htm">Musik</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsport94.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport94.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli94.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwirt94.htm', '*')">Wirtschaft/Recht</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndrama94.htm', '*')">Dramatisches Gestalten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik94.htm', '*')">Musik</A></P>
 <HR>
-<P><A HREF="facharbe.htm">Facharbeitsthemen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfacharbe.htm', '*')">Facharbeitsthemen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

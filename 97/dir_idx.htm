@@ -10,9 +10,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#schuljahr">Zum Schuljahr</A></P>
-<P><A HREF="dir.htm#dank">Wir danken!</A></P>
-<P><A HREF="dir.htm#abi">O. Schwarz: Zur <BR>Entlassung der <BR>Abiturienten</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#schuljahr', '*')">Zum Schuljahr</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#dank', '*')">Wir danken!</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#abi', '*')">O. Schwarz: Zur <BR>Entlassung der <BR>Abiturienten</A></P>
 </body>
 </html>

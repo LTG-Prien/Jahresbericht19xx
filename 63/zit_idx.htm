@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('altejb.htm')" background="../blau.gif">
-<P><A HREF="altejb.htm">Aus alten Jahresberichten</A></P>
-<P><A HREF="referat.htm">Aus Referaten</A></P>
-<P><A HREF="profil.htm">Zum Profil der Ludwig-Thoma-Oberrealschule</A></P>
-<P><A HREF="gereimte.htm">Gereimtes und Ungereimtes</A></P>
-<P><A HREF="stilbl.htm">Stilblüten</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\naltejb.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naltejb.htm', '*')">Aus alten Jahresberichten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreferat.htm', '*')">Aus Referaten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nprofil.htm', '*')">Zum Profil der Ludwig-Thoma-Oberrealschule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngereimte.htm', '*')">Gereimtes und Ungereimtes</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstilbl.htm', '*')">Stilblüten</A></P>
 </body>
 </html>

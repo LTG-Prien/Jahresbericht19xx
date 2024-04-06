@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('musik83.htm#2')" background="../blau.gif">
-<P><A HREF="musik83.htm#2">Vorweihnachtlicher Hexenzauber</A></P>
-<P><A HREF="fasch.htm">LTG-Fasching</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nmusik83.htm#2', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik83.htm#2', '*')">Vorweihnachtlicher Hexenzauber</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">LTG-Fasching</A></P>
 </body>
 </html>

@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('int_inf.htm')" bgcolor="#20C0FF" background="../blau.gif">
-<P><A HREF="info.htm">Hinweise zur CD</A></P>
-<P><A HREF="autoren.htm">Autoren</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nint_inf.htm', '*')" bgcolor="#20C0FF" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ninfo.htm', '*')">Hinweise zur CD</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nautoren.htm', '*')">Autoren</A></P>
 </body>
 </html>

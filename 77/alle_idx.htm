@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('lev.htm')" background="../blau.gif">
-<p><a href="lev.htm">LEV Landeseltern-<br>versammlung in Prien</a></p>
-<p><a href="smv77.htm#1">SMV</a></p>
-<p><a href="smv77.htm#2">Elternbeirat</a></p>
-<p><a href="arzt.htm">Schulärztliche Tätigkeit</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nlev.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlev.htm', '*')">LEV Landeseltern-<br>versammlung in Prien</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv77.htm#1', '*')">SMV</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv77.htm#2', '*')">Elternbeirat</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\narzt.htm', '*')">Schulärztliche Tätigkeit</a></p>
 </body>
 </html>

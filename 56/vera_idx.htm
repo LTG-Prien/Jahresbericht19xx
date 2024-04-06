@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('sportfes.htm')" background="../blau.gif">
-<P><A HREF="sportfes.htm">Bilder vom Sportfest</A></P>
-<P><A HREF="waus.htm">Weihnachtsaus-<br>stellung</A></P>
-<P><A HREF="lausflug.htm">Bilder vom Lehrerausflug</A></P>
-<P><A HREF="abi.htm#1">Schuljahresschluﬂ- und Entlassungsfeier</A></P>
-<P><A HREF="abi.htm#2">1. Abiturball</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsportfes.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsportfes.htm', '*')">Bilder vom Sportfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwaus.htm', '*')">Weihnachtsaus-<br>stellung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlausflug.htm', '*')">Bilder vom Lehrerausflug</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm#1', '*')">Schuljahresschluﬂ- und Entlassungsfeier</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm#2', '*')">1. Abiturball</A></P>
 </body>
 </html>

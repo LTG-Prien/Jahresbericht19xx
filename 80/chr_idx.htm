@@ -9,11 +9,11 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('chron.htm')" background="../blau.gif">
-<P><A HREF="chron.htm#1">Allg. schulische Veranstaltungen</A></P>
-<P><A HREF="chron.htm#5">Fahrten, Exkursionen, Theater</A></P>
-<P><A HREF="chron.htm#2">Berufs- und sozialkundliche Veranstaltungen</A></P>
-<P><A HREF="chron.htm#3">Musische Veranstaltungen - Schulfeiern</A></P>
-<P><A HREF="chron.htm#4">Sportliche Veranstaltungen</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nchron.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm#1', '*')">Allg. schulische Veranstaltungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm#5', '*')">Fahrten, Exkursionen, Theater</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm#2', '*')">Berufs- und sozialkundliche Veranstaltungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm#3', '*')">Musische Veranstaltungen - Schulfeiern</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm#4', '*')">Sportliche Veranstaltungen</A></P>
 </body>
 </html>

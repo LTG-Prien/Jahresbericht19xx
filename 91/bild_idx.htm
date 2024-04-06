@@ -8,12 +8,12 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('cd.htm')" background="../blau.gif">
-<P><A HREF="cd.htm">Erstellung der Schul-CD</A></P>
-<P><A HREF="fasch.htm">Schul-Fasching</A></P>
-<P><A HREF="bilder.htm">Schüleraustausch</A></P>
-<P><A HREF="bilder2.htm">Schulfest</A></P>
-<P><A HREF="bilder3.htm">Musiker</A></P>
-<P><A HREF="bilder4.htm">Weitere Bilder</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ncd.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ncd.htm', '*')">Erstellung der Schul-CD</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfasch.htm', '*')">Schul-Fasching</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder.htm', '*')">Schüleraustausch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder2.htm', '*')">Schulfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder3.htm', '*')">Musiker</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder4.htm', '*')">Weitere Bilder</A></P>
 </body>
 </html>

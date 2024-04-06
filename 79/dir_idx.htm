@@ -9,8 +9,8 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<p><a href="dir.htm">Vorwort</a></p>
-<p><a href="ende.htm">Schluﬂwort</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">Vorwort</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nende.htm', '*')">Schluﬂwort</a></p>
 </body>
 </html>

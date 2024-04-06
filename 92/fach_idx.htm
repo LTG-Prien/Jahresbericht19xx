@@ -8,13 +8,13 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('agumwelt.htm')" background="../blau.gif">
-<P><A HREF="reli92.htm">Religion</A></P>
-<P><A HREF="sport92.htm">Sport</A></P>
-<P><A HREF="agumwelt.htm">AG Umwelt</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nagumwelt.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli92.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport92.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nagumwelt.htm', '*')">AG Umwelt</A></P>
 <HR>
-<P><A HREF="lk.htm">Leistungskurse</A></P>
-<P><A HREF="facharbe.htm">Facharbeitsthemen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlk.htm', '*')">Leistungskurse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfacharbe.htm', '*')">Facharbeitsthemen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

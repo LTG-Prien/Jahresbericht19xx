@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('fahrt1.htm')" background="../blau.gif">
-<P><A HREF="fahrt1.htm">Englandfahrt der 9. Klasse</A></P>
-<P><A HREF="fahrt2.htm">3a in München</A></P>
-<P><A HREF="fahrt3.htm">Lehrfahrt der 8. Klassen</A></P>
-<P><A HREF="fahrt4.htm">Eine Reise in die Oberpfalz</A></P>
-<P><A HREF="theaterf.htm">Theaterfahrten</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfahrt1.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrt1.htm', '*')">Englandfahrt der 9. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrt2.htm', '*')">3a in München</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrt3.htm', '*')">Lehrfahrt der 8. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfahrt4.htm', '*')">Eine Reise in die Oberpfalz</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ntheaterf.htm', '*')">Theaterfahrten</A></P>
 </body>
 </html>

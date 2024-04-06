@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('abi.htm')" background="../blau.gif">
-<P><A HREF="abi.htm">Abiturfeier</A></P>
-<P><A HREF="chiem.htm">100 Jahre Chiemseebahn</A></P>
-<P><A HREF="musi.htm">Musik am LTG</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nabi.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi.htm', '*')">Abiturfeier</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchiem.htm', '*')">100 Jahre Chiemseebahn</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusi.htm', '*')">Musik am LTG</A></P>
 </body>
 </html>

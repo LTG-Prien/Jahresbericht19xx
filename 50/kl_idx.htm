@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('01_5051.htm')" background="../blau.gif">
-<P><A HREF="01_5051.htm">1. Klasse</A></P>
-<P><A HREF="02_5051.htm">2. Klasse</A></P>
-<P><A HREF="03_5051.htm">3. Klasse</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\n01_5051.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n01_5051.htm', '*')">1. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n02_5051.htm', '*')">2. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\n03_5051.htm', '*')">3. Klasse</A></P>
 </body>
 </html>

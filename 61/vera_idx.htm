@@ -8,10 +8,10 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('ged.htm')" background="../blau.gif">
-<P><A HREF="ged.htm">Ludwig-Thoma-Gedenkstunde</A></P>
-<P><A HREF="studient.htm#1">1. Studientag</A></P>
-<P><A HREF="studient.htm#2">2. Studientag</A></P>
-<P><A HREF="studient.htm#3">Vortrag: Jugend und Europagedanke</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nged.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nged.htm', '*')">Ludwig-Thoma-Gedenkstunde</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm#1', '*')">1. Studientag</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm#2', '*')">2. Studientag</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm#3', '*')">Vortrag: Jugend und Europagedanke</A></P>
 </body>
 </html>

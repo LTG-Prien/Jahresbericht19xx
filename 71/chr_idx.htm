@@ -8,7 +8,7 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('chron.htm')" background="../blau.gif">
-<P><A HREF="chron.htm">Tagebuch des Schuljahres 1971/72</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nchron.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nchron.htm', '*')">Tagebuch des Schuljahres 1971/72</A></P>
 </body>
 </html>

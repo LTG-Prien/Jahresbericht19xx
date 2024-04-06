@@ -9,11 +9,11 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<p><a href="dir.htm">An den Leser</a></p>
-<p><a href="dir2.htm#1">Aus dem Schulalltag</a></p>
-<p><a href="dir2.htm#2">Dank</a></p>
-<p><a href="dir3.htm">Zum Gedenken</a></p>
-<p><a href="abitur75.htm">Abitur</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">An den Leser</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm#1', '*')">Aus dem Schulalltag</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm#2', '*')">Dank</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir3.htm', '*')">Zum Gedenken</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabitur75.htm', '*')">Abitur</a></p>
 </body>
 </html>

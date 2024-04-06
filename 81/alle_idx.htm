@@ -9,11 +9,11 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('smv81.htm')" background="../blau.gif">
-<p><a href="smv81.htm">SMV</a></p>
-<p><a href="kaktus.htm">Schülerzeitung</a></p>
-<p><a href="elternbe.htm">Elternbeirat</a></p>
-<p><a href="arzt.htm">Schulärztliche Tätigkeit</a></p>
-<p><a href="polenhil.htm">Polenhilfe</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv81.htm', '*')" background="../blau.gif">
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv81.htm', '*')">SMV</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkaktus.htm', '*')">Schülerzeitung</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nelternbe.htm', '*')">Elternbeirat</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\narzt.htm', '*')">Schulärztliche Tätigkeit</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\npolenhil.htm', '*')">Polenhilfe</a></p>
 </body>
 </html>

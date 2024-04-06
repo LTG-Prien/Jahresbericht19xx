@@ -9,12 +9,12 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('wirt83.htm')" background="../blau.gif">
-<P><A HREF="mathe83.htm">Mathematik</A></P>
-<P><A HREF="reli83.htm">Religion</A></P>
-<P><A HREF="ethik83.htm">Ethik</A></P>
-<P><A HREF="musik83.htm#1">Musik</A></P>
-<P><A HREF="sport83.htm">Sport</A></P>
-<P><A HREF="wirt83.htm">Wirtschaft/Recht</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nwirt83.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmathe83.htm', '*')">Mathematik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli83.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nethik83.htm', '*')">Ethik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik83.htm#1', '*')">Musik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport83.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwirt83.htm', '*')">Wirtschaft/Recht</A></P>
 </body>
 </html>

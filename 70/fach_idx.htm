@@ -8,19 +8,19 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('bio70.htm')" background="../blau.gif">
-<P><A HREF="reli70.htm">Religion</A></P>
-<P><A HREF="bio70.htm">Biologie</A></P>
-<P><A HREF="mathe70.htm">Mathematik</A></P>
-<P><A HREF="physik70.htm">Physik</A></P>
-<P><A HREF="sport70.htm">Sport</A></P>
-<P><A HREF="schulspi.htm">Schulspiel</A></P>
-<p><a href="themen.htm">Themen der deutschen Schul- und Hausaufgaben</a></p>
-<p><a href="politik.htm">Politische Bildung</p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nbio70.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli70.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbio70.htm', '*')">Biologie</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmathe70.htm', '*')">Mathematik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nphysik70.htm', '*')">Physik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport70.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm', '*')">Schulspiel</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nthemen.htm', '*')">Themen der deutschen Schul- und Hausaufgaben</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\npolitik.htm', '*')">Politische Bildung</p>
 <hr>
-<P><A HREF="studient.htm">Studientage</A></P>
-<p><a href="lektuere.htm">Lesestoffe</a></p>
-<p><a href="u-mittel.htm#1">Einsatz von Lerngeräten</a></p>
-<p><a href="u-mittel.htm#2">Technische Unterrichtsmittel</a></p>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientage</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nu-mittel.htm#1', '*')">Einsatz von Lerngeräten</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nu-mittel.htm#2', '*')">Technische Unterrichtsmittel</a></p>
 </body>
 </html>

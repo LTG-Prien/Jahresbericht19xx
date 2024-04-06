@@ -8,7 +8,7 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('nik.htm')" background="../blau.gif">
-<P><A HREF="nik.htm">Nikolausfeier im Heim</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nnik.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nnik.htm', '*')">Nikolausfeier im Heim</A></P>
 </body>
 </html>

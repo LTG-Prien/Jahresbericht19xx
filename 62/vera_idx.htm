@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('freund.htm')" background="../blau.gif">
-<P><A HREF="freund.htm">Deutsch-französisches Freundschaftstreffen in Prien</A></P>
-<P><A HREF="musik.htm">Wastl Fanderl als kritischer Zuhörer</A></P>
-<P><A HREF="abi_01.htm">Abiturfeier 1963</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nfreund.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfreund.htm', '*')">Deutsch-französisches Freundschaftstreffen in Prien</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik.htm', '*')">Wastl Fanderl als kritischer Zuhörer</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi_01.htm', '*')">Abiturfeier 1963</A></P>
 </body>
 </html>

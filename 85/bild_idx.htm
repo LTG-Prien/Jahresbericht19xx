@@ -8,8 +8,8 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('b_sport.htm')" background="../blau.gif">
-<P><A HREF="b_sport.htm">Bilder vom Sport</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nb_sport.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nb_sport.htm', '*')">Bilder vom Sport</A></P>
 
 </body>
 </html>

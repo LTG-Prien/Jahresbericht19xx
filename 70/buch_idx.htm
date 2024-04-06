@@ -8,6 +8,6 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('buch.htm')" background="../blau.gif">
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nbuch.htm', '*')" background="../blau.gif">
 </body>
 </html>

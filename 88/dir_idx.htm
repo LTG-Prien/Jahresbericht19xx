@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('dir.htm')" background="../blau.gif">
-<P><A HREF="dir.htm">Zum 40. Schuljahr</A></P>
-<P><A HREF="dir2.htm">Statt Blumen</A></P>
-<P><A HREF="spenden.htm">Spenden</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ndir.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm', '*')">Zum 40. Schuljahr</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir2.htm', '*')">Statt Blumen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nspenden.htm', '*')">Spenden</A></P>
 </body>
 </html>

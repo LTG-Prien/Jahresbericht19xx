@@ -9,19 +9,19 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('internet.htm')" background="../blau.gif">
-<P><A HREF="internet.htm">Informatik</A></P>
-<P><A HREF="reli95.htm">Religion</A></P>
-<P><A HREF="deutsch.htm">Deutsch</A></P>
-<P><A HREF="solaranl.htm">Physik</A></P>
-<P><A HREF="drama95.htm">Dramatisches Gestalten</A></P>
-<P><A HREF="sport95.htm">Sport</A></P>
-<P><A HREF="wirt95.htm">Wirtschaft/Recht</A></P>
-<P><A HREF="autogen.htm#1">Autogenes Training</A></P>
-<P><A HREF="autogen.htm#2">AG Umwelt</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ninternet.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ninternet.htm', '*')">Informatik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli95.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndeutsch.htm', '*')">Deutsch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsolaranl.htm', '*')">Physik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndrama95.htm', '*')">Dramatisches Gestalten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport95.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwirt95.htm', '*')">Wirtschaft/Recht</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nautogen.htm#1', '*')">Autogenes Training</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nautogen.htm#2', '*')">AG Umwelt</A></P>
 <HR>
-<P><A HREF="lk95.htm">Leistungskurse</A></P>
-<P><A HREF="facharbe.htm">Facharbeitsthemen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlk95.htm', '*')">Leistungskurse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfacharbe.htm', '*')">Facharbeitsthemen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

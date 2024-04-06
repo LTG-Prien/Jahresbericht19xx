@@ -8,11 +8,11 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('smv.htm')" background="../blau.gif">
-<P><A HREF="smv.htm#1">Schulberatung</A></P>
-<P><A HREF="smv.htm#2">SOS - SMV</A></P>
-<P><A HREF="smv2.htm#1">Schülerbriefwechsel und Schüleraustausch</A></P>
-<P><A HREF="smv2.htm#2">Gesundheitswesen</A></P>
-<P><A HREF="allerl3.htm">Schülerheim</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsmv.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#1', '*')">Schulberatung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm#2', '*')">SOS - SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv2.htm#1', '*')">Schülerbriefwechsel und Schüleraustausch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv2.htm#2', '*')">Gesundheitswesen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nallerl3.htm', '*')">Schülerheim</A></P>
 </body>
 </html>

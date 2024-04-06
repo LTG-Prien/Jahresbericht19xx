@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('schulspi.htm')" background="../blau.gif">
-<P><A HREF="schulspi.htm">Schulspiel</A></P>
-<P><A HREF="inform.htm">Informatik</A></P>
-<P><A HREF="reli81.htm">Religion</A></P>
-<P><A HREF="sport81.htm">Sport</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nschulspi.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm', '*')">Schulspiel</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ninform.htm', '*')">Informatik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli81.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport81.htm', '*')">Sport</A></P>
 </body>
 </html>

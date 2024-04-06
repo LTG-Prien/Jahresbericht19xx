@@ -8,18 +8,18 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('gesch.htm')" background="../blau.gif">
-<P><A HREF="dir.htm#1">Schülerzahl und Klassenbildung</A></P>
-<P><A HREF="dir.htm#2">Räumliche Verhältnisse</A></P>
-<P><A HREF="dir.htm#3">Schülerheim</A></P>
-<P><A HREF="dir.htm#4">Reifeprüfung</A></P>
-<P><A HREF="dir.htm#5">Elternhaus und Schule</A></P>
-<P><A HREF="dir.htm#7">Schulsammlungen</A></P>
-<P><A HREF="dir.htm#8">Schülerlese-<br>bücherei</A></P>
-<P><A HREF="dank.htm">Dank der Schule</A></P>
-<P><A HREF="gedenken.htm">Zum Gedenken</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ngesch.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#1', '*')">Schülerzahl und Klassenbildung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#2', '*')">Räumliche Verhältnisse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#3', '*')">Schülerheim</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#4', '*')">Reifeprüfung</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#5', '*')">Elternhaus und Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#7', '*')">Schulsammlungen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndir.htm#8', '*')">Schülerlese-<br>bücherei</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndank.htm', '*')">Dank der Schule</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngedenken.htm', '*')">Zum Gedenken</A></P>
 <hr>
-<P><A HREF="gesch.htm">Zur Geschichte der Anstalt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ngesch.htm', '*')">Zur Geschichte der Anstalt</A></P>
 <p>&nbsp;</p>
 </body>
 </html>

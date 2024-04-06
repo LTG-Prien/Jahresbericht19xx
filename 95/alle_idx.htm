@@ -9,10 +9,10 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('abi95.htm')" background="../blau.gif">
-<P><A HREF="abi95.htm">Unsere Abiturienten</A></P>
-<P><A HREF="smv.htm">SMV</A></P>
-<P><A HREF="allerl1.htm#1">Elternbeirat</A></P>
-<P><A HREF="allerl1.htm#2">Förderverein</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nabi95.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nabi95.htm', '*')">Unsere Abiturienten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsmv.htm', '*')">SMV</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nallerl1.htm#1', '*')">Elternbeirat</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nallerl1.htm#2', '*')">Förderverein</A></P>
 </body>
 </html>

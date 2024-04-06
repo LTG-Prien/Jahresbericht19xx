@@ -9,15 +9,15 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('musik98.htm')" background="../blau.gif">
-<P><A HREF="musik98.htm">Musik</A></P>
-<P><A HREF="reli98.htm">Religion</A></P>
-<P><A HREF="drama.htm">Dramatisches Gestalten</A></P>
-<P><A HREF="sport98.htm">Sport</A></P>
-<P><A HREF="wirt98.htm">Wirtschaft/Recht</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nmusik98.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik98.htm', '*')">Musik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli98.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ndrama.htm', '*')">Dramatisches Gestalten</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport98.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwirt98.htm', '*')">Wirtschaft/Recht</A></P>
 <HR>
-<P><A HREF="lks.htm">Leistungskurse</A></P>
-<P><A HREF="facharbe.htm">Facharbeitsthemen</A></P>
-<P><A HREF="lektuere.htm">Klassenlektüren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlks.htm', '*')">Leistungskurse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfacharbe.htm', '*')">Facharbeitsthemen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Klassenlektüren</A></P>
 </body>
 </html>

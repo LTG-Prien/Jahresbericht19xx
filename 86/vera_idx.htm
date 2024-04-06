@@ -9,9 +9,9 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('wasser.htm')" background="../blau.gif">
-<P><A HREF="wasser.htm">Ausstellung: Wasserwirtschaft</A></P>
-<p><a href="studient.htm">Studientag der 11. Jahrgangsstufe</a></p>
-<p><a href="vera1.htm">Ein philosophischer Vormittag</a></p>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nwasser.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nwasser.htm', '*')">Ausstellung: Wasserwirtschaft</A></P>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudient.htm', '*')">Studientag der 11. Jahrgangsstufe</a></p>
+<p><A onclick="window.top.postMessage('href_click\n'+window.location+'\nvera1.htm', '*')">Ein philosophischer Vormittag</a></p>
 </body>
 </html>

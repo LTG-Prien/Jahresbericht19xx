@@ -9,12 +9,12 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('musiker.htm')" background="../blau.gif">
-<P><A HREF="musiker.htm">Musiker auf großer Fahrt</A></P>
-<P><A HREF="kl_fahrt.htm">Klassenfahrten: 5. Klassen</A></P>
-<P><A HREF="austausc.htm#1">Austausch mit Valdagno</A></P>
-<P><A HREF="austausc.htm#2">Austausch mit Graulhet</A></P>
-<P><A HREF="studienf.htm">Studienfahrt der 11. Klassen</A></P>
-<P><A HREF="ski.htm">Skilager</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nmusiker.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusiker.htm', '*')">Musiker auf großer Fahrt</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nkl_fahrt.htm', '*')">Klassenfahrten: 5. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#1', '*')">Austausch mit Valdagno</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\naustausc.htm#2', '*')">Austausch mit Graulhet</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstudienf.htm', '*')">Studienfahrt der 11. Klassen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nski.htm', '*')">Skilager</A></P>
 </body>
 </html>

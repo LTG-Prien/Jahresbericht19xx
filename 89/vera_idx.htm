@@ -9,13 +9,13 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('zeitung.htm#1')" background="../blau.gif">
-<P><A HREF="zeitung.htm#1">Römisches Mahl im LTG</A></P>
-<P><A HREF="zeitung.htm#2">Lehrertheater</A></P>
-<P><A HREF="veranst5.htm">Schülertheater</A></P>
-<P><A HREF="veranst1.htm">Juden und Christen im Gespräch</A></P>
-<P><A HREF="veranst2.htm">Dienstbesprechung der Direktoren</A></P>
-<P><A HREF="veranst3.htm">Tag der offenen Tür und Ehemaligentreffen</A></P>
-<P><A HREF="veranst4.htm">Ehemalige machten dem LTG Ehre</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nzeitung.htm#1', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nzeitung.htm#1', '*')">Römisches Mahl im LTG</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nzeitung.htm#2', '*')">Lehrertheater</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nveranst5.htm', '*')">Schülertheater</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nveranst1.htm', '*')">Juden und Christen im Gespräch</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nveranst2.htm', '*')">Dienstbesprechung der Direktoren</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nveranst3.htm', '*')">Tag der offenen Tür und Ehemaligentreffen</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nveranst4.htm', '*')">Ehemalige machten dem LTG Ehre</A></P>
 </body>
 </html>

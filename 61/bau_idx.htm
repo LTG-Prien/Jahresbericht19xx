@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('bau.htm')" background="../blau.gif">
-<P><A HREF="bau.htm">Der Bauabschnitt II entsteht</A></P>
-<P><A HREF="firstbau.htm">Firstbaum-Diebstahl</A></P>
-<P><A HREF="hebfeier.htm">Hebefeier: Bauabschnitt II</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nbau.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbau.htm', '*')">Der Bauabschnitt II entsteht</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nfirstbau.htm', '*')">Firstbaum-Diebstahl</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nhebfeier.htm', '*')">Hebefeier: Bauabschnitt II</A></P>
 </body>
 </html>

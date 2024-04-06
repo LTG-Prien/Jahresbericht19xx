@@ -9,15 +9,15 @@ content="text/html; charset=iso-8859-1">
 <base target="info">
 </head>
 
-<body onload="top.load_info('informat.htm')" background="../blau.gif">
-<P><A HREF="informat.htm">Informatik</A></P>
-<P><A HREF="reli79.htm">Religion</A></P>
-<P><A HREF="musik.htm">Musik</A></P>
-<P><A HREF="sport79.htm">Sport</A></P>
-<P><A HREF="schulspi.htm">Schulspiel</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\ninformat.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\ninformat.htm', '*')">Informatik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nreli79.htm', '*')">Religion</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nmusik.htm', '*')">Musik</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsport79.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nschulspi.htm', '*')">Schulspiel</A></P>
 <hr>
-<P><A HREF="erste.htm">Erste Hilfe</A></P>
-<P><A HREF="lektuere.htm">Lesestoffe</A></P>
-<P><A HREF="sprachla.htm">Sprachlabor</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nerste.htm', '*')">Erste Hilfe</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlektuere.htm', '*')">Lesestoffe</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsprachla.htm', '*')">Sprachlabor</A></P>
 </body>
 </html>

@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <link rel=stylesheet type="text/css" href="../ltg50.css">
 <base target="info">
 </head>
-<body onload="top.load_info('lesen.htm')" background="../blau.gif">
-<P><A HREF="lesen.htm">Vorlesewettbewerb</A></P>
-<P><A HREF="stud64_2.htm">Studientage der 8. Klasse</A></P>
-<P><A HREF="stud64_1.htm">Studientage der 9. Klasse</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nlesen.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nlesen.htm', '*')">Vorlesewettbewerb</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud64_2.htm', '*')">Studientage der 8. Klasse</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nstud64_1.htm', '*')">Studientage der 9. Klasse</A></P>
 </body>
 </html>

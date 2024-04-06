@@ -8,9 +8,9 @@ content="text/html; charset=iso-8859-1">
 <title></title>
 <base target="info">
 </head>
-<body onload="top.load_info('sfest.htm')" background="../blau.gif">
-<P><A HREF="sfest.htm">Schulfest</A></P>
-<P><A HREF="sportpic.htm">Sport</A></P>
-<P><A HREF="bilder1.htm">Weitere Bilder</A></P>
+<body onload="window.top.postMessage('load_info\n'+window.location+'\nsfest.htm', '*')" background="../blau.gif">
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsfest.htm', '*')">Schulfest</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nsportpic.htm', '*')">Sport</A></P>
+<P><A onclick="window.top.postMessage('href_click\n'+window.location+'\nbilder1.htm', '*')">Weitere Bilder</A></P>
 </body>
 </html>
