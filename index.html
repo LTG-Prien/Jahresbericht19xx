@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/* Floating actions design by Mert Cukuren: https://codepen.io/knyttneve/pen/rGLxbP */
+			html, body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			iframe {
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+			
+			.floating {
+				position: absolute;
+				
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				
+				height: 60px;
+				padding: 0 5px;
+				background-color: #fff;
+				
+				box-sizing: border-box;
+				border-radius: 60px;
+			}
+			
+			.floating > a {
+				width: 30px;
+				height: 30px;
+			}
+			
+			.overlay-actions {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+			}
+			
+			.actions {
+				bottom: 25px;
+				right: 25px;
+				width: 120px;
+				justify-content: space-around;
+			}
+			
+			.overlay-search {
+				position: fixed;
+				top: 0;
+				right: calc(50%);
+			}
+			
+			.search {
+				top: 88px;
+				right: calc(310px / -2 - 80px);
+				width: 310px;
+				justify-content: center;
+				transition: .3s ease 0s;
+			}
+			
+			.shown > .search > * {
+				transition: .2s ease .15s;
+			}
+			
+			.hidden > .search {
+				right: -80px;
+				width: 0;
+				padding: 0 0;
+			}
+			
+			.hidden > .search > * {
+				opacity: 0;
+				transition: .1s ease 0s;
+			}
+			
+			.search > input {
+				height: 100%;
+				border: none;
+				outline: none;
+				width: calc(100% - 90px);
+				font-size: 20px;
+			}
+			
+			path {
+				stroke-width: 32px;
+				fill: none;
+				stroke: currentcolor;
+				color: #000;
+				font-size: 30px;
+			}
+			
+			.sharp {
+				fill: #000;
+				stroke: none;
+			}
+		</style>
+		<script src="search_map.js"></script>
+		<script src="levenshtein.js"></script>
+		<script>
+			let names = Object.keys(search_map);
+
+			let start = Date.now(), hits = 0;
+			let duplicates = [];
+			for (let i = 0; i < names.length; i++) {
+				for (let j = i + 1; j < names.length; j++) {
+					hits++
+					if (levenshtein(names[i], names[j]) < 3) {
+						duplicates.push([names[i], names[j]])
+					}
+				}
+			}
+			console.log("Duplicates:", duplicates)
+			console.log("Took", (Date.now() - start), "ms (For", hits, "hits)")
+
+			const get = id => document.getElementById(id)
+			// Leitet messages ans content-Frame weiter.
+			// (Siehe script in index.htm)
+			window.addEventListener("message", (event) => {
+				get("content").contentWindow.postMessage(event.data, '*')
+			});
+			
+			// Such-Leiste
+			window.addEventListener("load", () => {
+				get("btn-toggle-search").addEventListener("click", () => {
+					get("search").classList.toggle("hidden")
+					get("search").classList.toggle("shown")
+					if (get("search").classList.contains("shown")) {
+						get("search-input").value = ""
+						get("search-input").focus()
+					}
+				})
+				get("btn-close-search").addEventListener("click", () => {
+					get("search").classList.add("hidden")
+					get("search").classList.remove("shown")
+				})
+				
+				get("search-input").addEventListener("keypress", function(event) {
+					if (event.key === "Enter") {
+						event.preventDefault();
+						get("btn-submit-search").click();
+					}
+				});
+				
+				get("btn-submit-search").addEventListener("click", () => {
+					get("search-input").focus()
+					
+					let text = get("search-input").value
+					if (text.trim() === "") {
+						return
+					}
+					alert("Searched for " + text)
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<iframe src="index.htm" id="content"></iframe>
+
+		<div class="overlay-actions">
+			<div class="floating actions">
+				<a href="#" id="btn-toggle-search">
+					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+						<path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" stroke-miterlimit="10"></path>
+						<path stroke-linecap="round" stroke-miterlimit="10" d="M338.29 338.29L448 448"></path>
+					</svg>
+				</a>
+				<a href="https://ltgarchiv.wanderl.com/">
+					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+						<path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" stroke-linecap="round" stroke-linejoin="round"></path>
+						<path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" stroke-linecap="round" stroke-linejoin="round"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="overlay-search hidden" id="search">
+			<div class="floating search">
+				<input placeholder="Name..." id="search-input"></input>
+				<a href="#" id="btn-submit-search">
+					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+						<path d="M464 428L339.92 303.9a160.48 160.48 0 0030.72-94.58C370.64 120.37 298.27 48 209.32 48S48 120.37 48 209.32s72.37 161.32 161.32 161.32a160.48 160.48 0 0094.58-30.72L428 464zM209.32 319.69a110.38 110.38 0 11110.37-110.37 110.5 110.5 0 01-110.37 110.37z" stroke-miterlimit="10" class="sharp"></path>
+					</svg>
+				</a>
+				<a href="#" id="btn-close-search">
+					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+						<path d="M400 145.49L366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49z" stroke-miterlimit="10" class="sharp"></path>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
