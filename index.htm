@@ -41,7 +41,11 @@ window.addEventListener("message", (event) => {
 	}
 	
 	else if (parts[0] === "load") { // Siehe unten
-		load(parseInt(parts[2]), parts[3], relFolder);
+		if (parts[3] === "redirect") {
+			window.parent.postMessage("redirect", "*")
+		} else {
+			load(parseInt(parts[2]), parts[3], relFolder);
+		}
 	}
 	
 	else if (parts[0] === "href_click") {
