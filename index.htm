@@ -21,6 +21,7 @@ Hotfix um Bugs durch CORS zu fixen:
 	... sonstige Parameter
   ]
 */
+var lock = false, lock2 = false; // Sperren um Überschreiben der Auswahl während Suche zu verhindern
 window.addEventListener("message", (event) => {
 	if (!event.data.split) { return }
 	let parts = event.data.split("\n")
@@ -32,8 +33,12 @@ window.addEventListener("message", (event) => {
 	let relPath = parts[1].substring(commonSuperpart.length + 1)
 	let relFolder = relPath.substring(0, relPath.lastIndexOf("/") + 1)
 	
-	if (parts[0] === "load_info") { // load_info-Methode
-		document.getElementById('info').src = relFolder + parts[2];
+	if (parts[0] === "load_info") { // früher die load_info-Methode
+		if (lock) {
+			lock = !lock;
+		} else {
+			document.getElementById('info').src = relFolder + parts[2];
+		}
 	}
 	
 	else if (parts[0] === "load_grus_idx") { // Zugriff auf top.frames.leftmenu
@@ -55,6 +60,24 @@ window.addEventListener("message", (event) => {
 		// die gew&#252;nschte ersetzte.
 		// Keine Ahnung wer sich das ausgedacht hat, jetzt wird das Haupt-Frame direkt ersetzt.
 		document.getElementById('info').src = relFolder + parts[2];
+	}
+	
+	else if (parts[0] === "search_hit") {
+		// Such-Funktion (siehe index.html)
+		lock = true;
+		lock2 = event.data;
+		document.getElementById('auswahl1').contentWindow.postMessage(event.data, '*')
+		document.getElementById('auswahl2').src = parts[2] + "/" + parts[2] + "_mbr.htm";
+		document.getElementById('leftmenu').src = parts[2] + "/" + "kl_idx.htm";
+		document.getElementById('info').src = parts[2] + "/" + parts[3] + "_" + parts[2] + (parseInt(parts[2]) + 1) + ".htm";
+	}
+	
+	else if (parts[0] === "ch_sel_init") {
+		// Such-Funktion (Siehe *_mbr.htm)
+		if (lock2) {
+			document.getElementById('auswahl2').contentWindow.postMessage(lock2, '*')
+			lock2 = false;
+		}
 	}
 });
 

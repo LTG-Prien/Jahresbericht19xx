@@ -14,6 +14,14 @@ content="text/html; charset=iso-8859-1">
   }
 </style>
 <script>
+window.addEventListener("message", (event) => {
+	if (!event.data.split) { return }
+	let parts = event.data.split("\n")
+	
+	if (parts[0] === "search_hit") {
+		document.getElementById("yearSelection").value = parts[2]
+	}
+});
 function load(a, x) {
 	window.top.postMessage('load\n'+window.location+'\n'+a+'\n'+x, '*')
 }
@@ -23,7 +31,7 @@ function load(a, x) {
 <body bgcolor="#20C0FF" background="blau.gif">
 <center>
 <form name "Select1">
-  <select name="Auswahl" size="1" onchange="load(1, this.value)" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150>
+  <select name="Auswahl" id="yearSelection" size="1" onchange="load(1, this.value)" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150>
     <option selected value="not">Schuljahr w&aumlhlen</option>
     <option value="grus">Einleitung</option>
     <option value="49">Schuljahr 1949/50</option>

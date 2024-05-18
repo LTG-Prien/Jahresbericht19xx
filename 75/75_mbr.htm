@@ -9,9 +9,10 @@ content="text/html; charset=iso-8859-1">
 </head>
 
 <body background="../blau.gif">
+<script>window.addEventListener("load",e=>{window.top.postMessage('ch_sel_init\n'+window.location, '*')});window.addEventListener("message",e=>{if(e.data?.split?.("\n")?.[0]==="search_hit")document.getElementById("chapterSelection").value="kl_idx.htm";});</script>
 <center>
 <form name "Select2">
-<select name="Auswahl2" size="1" OnChange="window.top.postMessage('load\n'+window.location+'\n2\n'+this.form.Auswahl2.options[this.form.Auswahl2.selectedIndex].value, '*')" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150>
+<select name="Auswahl2" size="1" OnChange="window.top.postMessage('load\n'+window.location+'\n2\n'+this.form.Auswahl2.options[this.form.Auswahl2.selectedIndex].value, '*')" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150 id="chapterSelection">
         <option selected value="not">Rubrik</option>
         <option value="dir_idx.htm">Direktorat</option>
         <option value="chr_idx.htm">Chronik</option>
