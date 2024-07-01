@@ -63,6 +63,7 @@ function search(event) {
 			resultsDOM.append(a);
 			a.onclick=() => {
 				let sr = search_index[res]
+				sr = [Object.keys(sr)[0], Object.values(sr)[0].replace(/\D/, "")] // TODO
 				get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+sr[0]+'\n'+sr[1], '*')
 				closeSearch()
 			}
