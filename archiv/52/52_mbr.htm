@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="AUTHOR" content="LTG Prien, L. Hartl, Dr. G. Hetz">
+<title>Auswahlmenu2</title>
+<link rel=stylesheet type="text/css" href="../ltg50.css">
+</head>
+
+<body background="../blau.gif">
+<script>window.addEventListener("load",e=>{window.top.postMessage('ch_sel_init\n'+window.location, '*')});window.addEventListener("message",e=>{if(e.data?.split?.("\n")?.[0]==="search_hit")document.getElementById("chapterSelection").value="kl_idx.htm";});</script>
+<center>
+<form name "Select2">
+<select name="Auswahl2" size="1" OnChange="window.top.postMessage('load\n'+window.location+'\n2\n'+this.form.Auswahl2.options[this.form.Auswahl2.selectedIndex].value, '*')" style="width:150px; font-size:10pt; margin-top:5px; background-color:#FFFFE0; font-family:Arial,Helvetica,sans-serif;" width=150 id="chapterSelection">
+        <option selected value="not">Rubrik</option>
+        <option value="kl_idx.htm">Klassen</option>
+        <option value="vera_idx.htm">Sport</option>
+        <option value="aus_idx.htm">Ausfl&#252;ge</option>
+        <option value="wett_idx.htm">Wettbewerb</option>
+        <option value="bild_idx.htm">Schulgeb&#228;ude</option>
+</select></form></center>
+</body>
+</html>

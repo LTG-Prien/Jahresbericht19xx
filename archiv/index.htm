@@ -1,0 +1,133 @@
+<!-- Gruesse vom 2inf1-Kurs. (2024) -->
+<!DOCTYPE html>
+<!-- last modified on Fr, 6. 3. 1999 V1.0-->
+<html>
+<HEAD>
+<TITLE>
+Herzlich willkomen zu 50 Jahren LTG Prien
+</TITLE>
+<META NAME="AUTHOR" CONTENT="LTG Prien, L. Hartl, Dr. G. Hetz">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<SCRIPT Language="JavaScript">
+/*
+Mein Beileid an den, der damit weiterarbeiten muss.
+
+Hotfix um Bugs durch CORS zu fixen:
+  Alle top.frames-Zugriffe wurden mit window.postMessage ersetzt.
+  event.data-Format:
+  [
+    operation,
+	window.location des Senders (für relative src-Pfade),
+	... sonstige Parameter
+  ]
+*/
+var lock = false, lock2 = false; // Sperren um Überschreiben der Auswahl während Suche zu verhindern
+window.addEventListener("message", (event) => {
+	if (!event.data.split) { return }
+	let parts = event.data.split("\n")
+
+	// relativen Ordner herausfinden
+	// klappt nur wenn index.htm wirklich der oberste Ordner ist aber egal
+	let commonSuperpart = "" + window.location
+	commonSuperpart = commonSuperpart.substring(0, commonSuperpart.lastIndexOf("/"))
+	let relPath = parts[1].substring(commonSuperpart.length + 1)
+	let relFolder = relPath.substring(0, relPath.lastIndexOf("/") + 1)
+	
+	if (parts[0] === "load_info") { // früher die load_info-Methode
+		if (lock) {
+			lock = !lock;
+		} else {
+			document.getElementById('info').src = relFolder + parts[2];
+		}
+	}
+	
+	else if (parts[0] === "load_grus_idx") { // Zugriff auf top.frames.leftmenu
+		document.getElementById('leftmenu').src = relFolder + "grus_idx.htm";
+	}
+	
+	else if (parts[0] === "load") { // Siehe unten
+		if (parts[3] === "redirect") {
+			window.parent.postMessage("redirect", "*")
+		} else {
+			load(parseInt(parts[2]), parts[3], relFolder);
+		}
+	}
+	
+	else if (parts[0] === "href_click") {
+		// <a href="...">, durch onclick="window.postMessage(...)" ersetzt.
+		// Die <a>-Tags sind in dem Menü links, leiteten das dann auf die gewünschte Seite weiter,
+		// die dann in body.onload das Menü links wieder durch die Menüseite und das Hauptframe durch
+		// die gewünschte ersetzte.
+		// Keine Ahnung wer sich das ausgedacht hat, jetzt wird das Haupt-Frame direkt ersetzt.
+		document.getElementById('info').src = relFolder + parts[2];
+	}
+	
+	else if (parts[0] === "search_hit") {
+		// Such-Funktion (siehe index.html)
+		lock = true;
+		lock2 = event.data;
+		document.getElementById('auswahl1').contentWindow.postMessage(event.data, '*')
+		document.getElementById('auswahl2').src = parts[2] + "/" + parts[2] + "_mbr.htm";
+		document.getElementById('leftmenu').src = parts[2] + "/" + "kl_idx.htm";
+		document.getElementById('info').src = parts[2] + "/" + parts[3] + "_" + parts[2] + (parseInt(parts[2]) + 1) + ".htm";
+	}
+	
+	else if (parts[0] === "ch_sel_init") {
+		// Such-Funktion (Siehe *_mbr.htm)
+		if (lock2) {
+			document.getElementById('auswahl2').contentWindow.postMessage(lock2, '*')
+			lock2 = false;
+		}
+	}
+});
+
+/*
+Aus auswahl.htm kopiert und mit rel erweitert.
+*/
+function load(a, x, rel) {
+	if (x === "not") {
+		return;
+	} else {
+		if (a === 1) {
+			document.getElementById('auswahl2').src = x + '/' + x + '_mbr.htm';
+			document.getElementById('leftmenu').src = "blau.htm";
+			document.getElementById('info').src = x + '/' + x + '_inf.htm';
+		} else {
+			document.getElementById('leftmenu').src = rel + x;
+		}
+	}
+}
+</SCRIPT>
+</HEAD>
+
+<FRAMESET COLS="160,*" FRAMEBORDER="NO" BORDER=0>
+<FRAMESET ROWS="40,50,*" BORDER="0">
+<FRAME SRC="auswahl.htm" id="auswahl1" MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO NORESIZE FRAMEBORDER=NO>
+<FRAME SRC="logo.htm" id="auswahl2" MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO NORESIZE FRAMEBORDER=NO>
+<FRAME SRC="int/int_idx.htm" id="leftmenu" MARGINWIDTH=4 MARGINHEIGHT=3 SCROLLING=AUTO NORESIZE FRAMEBORDER=NO>
+</FRAMESET>
+<FRAMESET ROWS="72,*" BORDER=0>
+<FRAME SRC="top.htm" id="top" MARGINWIDTH=2 MARGINHEIGHT=2 SCROLLING=NO NORESIZE FRAMEBORDER=NO>
+<FRAME SRC="int/int_inf.htm" id="info" MARGINWIDTH=20 MARGINHEIGHT=18 SCROLLING=AUTO NORESIZE FRAMEBORDER=NO>
+</FRAMESET>
+</FRAMESET>
+<NOFRAMES>
+<BODY BGCOLOR="#FFFFFF" ALINK="#FFFFFF" VLINK="#FF8080" LINK="#FF4040" TEXT="#000000">
+<HR>
+<center>
+<B>
+Herzlich Willkommen bei
+<BR>
+50 Jahre Ludwig-Thoma-Gymnasium Prien am Chiemsee
+</BR>
+</B>
+</center>
+<P>
+Ihr Browser unterst&uuml;tzt leider keine Frames. Zum Betrachten dieser CD ist
+ein framef&auml;higer Browser notwendig. Bitte installieren Sie einen
+Browser der Framesets unterst&uuml;tzt, z.B. Netscape Navigator ab Version 3.0
+oder Microsoft Internet Explorer ab Version 4.0, auf Ihrem Rechner. Au&#223;erdem
+müssen Sie das Ausführen von JavaScript zulassen.
+</BODY>
+</NOFRAMES>
+</HTML>
