@@ -5,10 +5,11 @@ let duplicates = [];
 for (let i = 0; i < names.length; i++) {
 	for (let j = i + 1; j < names.length; j++) {
 		hits++
-		if (levenshtein(names[i], names[j]) < 3) {
+		if (levenshtein(names[i].toLowerCase(), names[j].toLowerCase()) < 3) {
 			duplicates.push([names[i], names[j]])
 		}
 	}
 }
+let end = Date.now();
 console.log("Duplicates:", duplicates)
-console.log("Took", (Date.now() - start), "ms (For", hits, "hits)")
+console.log("Found", duplicates.length, "duplicates in", (end - start), "ms (eq. ", hits, "ops)")
