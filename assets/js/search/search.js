@@ -1,5 +1,12 @@
 var currentSearchSelection = null;
 
+// search_aliases in search_index mergen
+for (let alias of Object.keys(search_aliases)) {
+	let name = search_aliases[alias]
+	search_index[name] = { ...search_index[name], ...search_index[alias] }
+	delete search_index[alias]
+}
+
 function toggleSearch() {
 	get("search").classList.toggle("hidden")
 	get("search").classList.toggle("shown")
@@ -59,6 +66,12 @@ function search(event) {
 		for (let name of Object.keys(search_index)) {
 			if (matches(text, name.toLowerCase())) {
 				results.push(name)
+			}
+		}
+		for (let name of Object.keys(search_aliases)) {
+			let alias = search_aliases[name]
+			if (matches(text, name.toLowerCase()) && !matches(text, alias.toLowerCase() /* nicht 2x anzeigen */)) {
+				results.push(alias)
 			}
 		}
 	}
