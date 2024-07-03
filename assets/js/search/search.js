@@ -79,7 +79,11 @@ function search(event) {
 			if (currentSearchSelection) {
 				a.innerText = `Klasse ${res[1]} (19${res[0]})`;
 				a.onclick=() => {
-					get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+res[0]+'\n'+res[1].replaceAll(/\D/g, "")+'\n'+res[1], '*')
+					let classCode = res[1].replaceAll(/\D/g, "")
+					if (parseInt(res[0]) < 65) {
+						classCode = "0" + classCode
+					}
+					get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+res[0]+'\n'+classCode+'\n'+res[1], '*')
 					closeSearch()
 				}
 			} else {
