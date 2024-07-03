@@ -1,9 +1,17 @@
+var currentSearchSelection = null;
+
 function toggleSearch() {
 	get("search").classList.toggle("hidden")
 	get("search").classList.toggle("shown")
 	if (get("search").classList.contains("shown")) {
+		currentSearchSelection = null;
 		get("search-input").value = ""
+		get("search-input").placeholder = "Name..."
 		get("search-input").focus()
+		let resultsDOM = get("search-results")
+		while (resultsDOM.children[0]) {
+			resultsDOM.removeChild(resultsDOM.children[0])
+		}
 	}
 }
 
@@ -35,14 +43,23 @@ function search(event) {
 	}
 
 	let text = get("search-input").value.trim().toLowerCase()
-	if (text === "") {
+	if (text === "" && !currentSearchSelection) {
 		return
 	}
 	
 	let results = [];
-	for (let name of Object.keys(search_index)) {
-		if (matches(text, name.toLowerCase())) {
-			results.push(name)
+	if (currentSearchSelection) {
+		for (let year of Object.keys(currentSearchSelection)) {
+			let value = `Klasse ${currentSearchSelection[year]} (19${year})`
+			if (matches(text, value.toLowerCase())) {
+				results.push([year, currentSearchSelection[year]])
+			}
+		}
+	} else {
+		for (let name of Object.keys(search_index)) {
+			if (matches(text, name.toLowerCase())) {
+				results.push(name)
+			}
 		}
 	}
 	
@@ -59,14 +76,23 @@ function search(event) {
 
 		for (let res of results.slice(0, limit)) {
 			let a = document.createElement("a")
-			a.innerText = res;
-			resultsDOM.append(a);
-			a.onclick=() => {
-				let sr = search_index[res]
-				sr = [Object.keys(sr)[0], Object.values(sr)[0].replace(/\D/, "")] // TODO
-				get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+sr[0]+'\n'+sr[1], '*')
-				closeSearch()
+			if (currentSearchSelection) {
+				a.innerText = `Klasse ${res[1]} (19${res[0]})`;
+				a.onclick=() => {
+					get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+res[0]+'\n'+res[1].replaceAll(/\D/g, "")+'\n'+res[1], '*')
+					closeSearch()
+				}
+			} else {
+				a.innerText = res;
+				a.onclick=() => {
+					currentSearchSelection = search_index[res]
+					get("search-input").placeholder = "Klasse..."
+					get("search-input").value = ""
+					search({})
+				}
 			}
+
+			resultsDOM.append(a);
 		}
 
 		if (results.length > 11) {
