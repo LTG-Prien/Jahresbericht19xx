@@ -27,7 +27,7 @@ window.addEventListener("message", (event) => {
 	let parts = event.data.split("\n")
 
 	// relativen Ordner herausfinden
-	// klappt nur wenn index.htm wirklich der oberste Ordner ist aber egal
+	// klappt nur wenn index.htm wirklich im obersten Ordner (relativ zu den einzelnen Seiten) ist aber egal (es klappt)
 	let commonSuperpart = "" + window.location
 	commonSuperpart = commonSuperpart.substring(0, commonSuperpart.lastIndexOf("/"))
 	let relPath = parts[1].substring(commonSuperpart.length + 1)
