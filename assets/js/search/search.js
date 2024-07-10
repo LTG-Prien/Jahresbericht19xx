@@ -7,6 +7,17 @@ for (let alias of Object.keys(search_aliases)) {
 	delete search_index[alias]
 }
 
+// search_index_new in search_index mergen
+for (let year of Object.keys(search_index_new)) {
+	for (let cls of Object.keys(search_index_new[year])) {
+		for (let pupil of search_index_new[year][cls].pupils) {
+			pupil = pupil.replace(', ', ' ').trim()
+			search_index[pupil] = {...search_index[pupil]}
+			search_index[pupil][year] = cls
+		}
+	}
+}
+
 function toggleSearch() {
 	get("search").classList.toggle("hidden")
 	get("search").classList.toggle("shown")
@@ -90,13 +101,18 @@ function search(event) {
 		for (let res of results.slice(0, limit)) {
 			let a = document.createElement("a")
 			if (currentSearchSelection) {
-				a.innerText = `Klasse ${res[1]} (19${res[0]})`;
+				let cls = res[0]
+				if (cls.length < 4) {
+					cls = '19' + cls + '-19' + (parseInt(cls) + 1)
+				}
+
+				a.innerText = `Klasse ${res[1]} (${cls})`;
 				a.onclick=() => {
-					let classCode = res[1].replaceAll(/\D/g, "")
-					if (parseInt(res[0]) < 65) {
-						classCode = "0" + classCode
+					if (res[0].length < 4) {
+						gotoBefore2000(res)
+					} else {
+						gotoAfter2000(res)
 					}
-					get("content").contentWindow.postMessage('search_hit\n'+window.location+'\n'+res[0]+'\n'+classCode+'\n'+res[1], '*')
 					closeSearch()
 				}
 			} else {

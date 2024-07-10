@@ -1,6 +1,6 @@
 import re, os.path
 
-SEARCH_INDEX_PATH = "../js/search/search_index.js"
+SEARCH_INDEX_PATH = "../js/search/before_2000/search_index.js"
 ARCHIVE_PATH = "../../archiv"
 
 

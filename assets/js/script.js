@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
 	let ms = 4 * 60 * 1000;
 	let idleTimeout = setTimeout(cb, ms);
 	
-	for (let event of ['click', 'touchstart', 'mousemove', 'scroll']) {
+	for (let event of ['click', 'touchstart', 'mousemove', 'scroll', 'keydown']) {
 		document.addEventListener(event, () => {
 			clearTimeout(idleTimeout);
 			idleTimeout = setTimeout(cb, ms);

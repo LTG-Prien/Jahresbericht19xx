@@ -1,28 +1,13 @@
-<!-- Grüße vom 2inf1-Kurs. (2024) -->
-<!DOCTYPE html>
-<html>
-	<head>
-		<script>
-			const NEW_PAGE = "https://ltgarchiv.wanderl.com/";
-			// OLD_PAGE in assets/js/search/after_2000/search_inject.js
-		</script>
-		<link href="assets/css/style.css" rel="stylesheet">
-		<script src="assets/js/fastest-levenshtein.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/search/before_2000/search_index.js"></script>
-		<script src="assets/js/search/before_2000/search_aliases.js"></script>
-		<script src="assets/js/search/after_2000/search_index.js"></script>
-		<script src="assets/js/search/search.js"></script>
-		<script src="assets/js/search/error_detection.js"></script>
-		<script src="assets/js/search/before_2000/search_handler.js"></script>
-		<script>
-			// findDuplicates();
-		</script>
-	</head>
-	<body>
-		<iframe src="archiv/index.htm" id="content"></iframe>
+const OLD_PAGE = "https://ltg-prien.github.io/Jahresbericht19xx/";
 
-		<div class="overlay-actions">
+let link = document.createElement("link");
+link.href = OLD_PAGE + "/assets/css/style.css";
+link.rel = "stylesheet";
+document.head.appendChild(link);
+
+let div = document.createElement("div");
+div.classList.add("overlay-actions");
+div.innerHTML = `
 			<div class="floating actions">
 				<a href="#" id="btn-toggle-search">
 					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
@@ -39,8 +24,14 @@
 					</svg>
 				</a>
 			</div>
-		</div>
-		<div class="overlay-search hidden" id="search">
+`;
+document.body.appendChild(div);
+
+div = document.createElement("div");
+div.classList.add("overlay-search");
+div.classList.add("hidden");
+div.id = "search";
+div.innerHTML = `
 			<div class="floating search">
 				<div class="floating-inner">
 					<input id="search-input"></input>
@@ -53,6 +44,11 @@
 				</div>
 				<div id="search-results"></div>
 			</div>
-		</div>
-	</body>
-</html>
+`;
+document.body.appendChild(div);
+
+for (let src of ["fastest-levenshtein.js", "script.js", "search/before_2000/search_index.js", "search/before_2000/search_aliases.js", "search/after_2000/search_index.js", "search/search.js", "search/error_detection.js", "search/after_2000/search_handler.js"]) {
+	let script = document.createElement("script");
+	script.src = OLD_PAGE + "/assets/js/" + src;
+	document.head.appendChild(script);
+}

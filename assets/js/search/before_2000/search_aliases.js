@@ -4,5 +4,8 @@ const search_aliases = {
     "Moosbauer": "Moosbauer Christine", // Waren in 2 Zeilen aufgeteilt: Moosbauer | Prien\nChristine | Prien
     "Kraska": "Kraska Frank", // Fehlt komplett der Vorname
 
-    "Peters Kerstin-Elisabeth": "Peters Kerstin"
+    "Peters Kerstin-Elisabeth": "Peters Kerstin",
+    "Haas Kerstin Iris": "Haas Kerstin",
+    "Peters Hartmut-Uwe": "Peters Hartmut",
+    "PetersHartmut-Uwe": "Peters Hartmut"
 };
