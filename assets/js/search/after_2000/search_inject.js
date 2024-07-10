@@ -1,5 +1,8 @@
+const NEW_PAGE = "https://ltgarchiv.wanderl.com/";
 const OLD_PAGE = "https://ltg-prien.github.io/Jahresbericht19xx/";
 
+const IS_NEW_PAGE = true;
+const get = id => document.getElementById(id)
 let link = document.createElement("link");
 link.href = OLD_PAGE + "/assets/css/style.css";
 link.rel = "stylesheet";
@@ -46,9 +49,3 @@ div.innerHTML = `
 			</div>
 `;
 document.body.appendChild(div);
-
-for (let src of ["fastest-levenshtein.js", "script.js", "search/before_2000/search_index.js", "search/before_2000/search_aliases.js", "search/after_2000/search_index.js", "search/search.js", "search/error_detection.js", "search/after_2000/search_handler.js"]) {
-	let script = document.createElement("script");
-	script.src = OLD_PAGE + "/assets/js/" + src;
-	document.head.appendChild(script);
-}
