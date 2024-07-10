@@ -84,12 +84,16 @@ function search(event) {
 			}
 		}
 		for (let name of Object.keys(search_aliases)) {
-			let alias = search_aliases[name]
-			if (matches(text, name.toLowerCase()) && !matches(text, alias.toLowerCase() /* nicht 2x anzeigen */)) {
+			if (matches(text, name.toLowerCase())) {
+				let alias = search_aliases[name]
+				while (Object.keys(search_aliases).includes(alias)) {
+					alias = search_aliases[alias]
+				}
 				results.push(alias)
 			}
 		}
 	}
+	results = [...new Set(results)];
 	
 	if (results.length == 0) {
 		let span = document.createElement("span")
