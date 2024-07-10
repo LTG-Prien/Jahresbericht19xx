@@ -19,7 +19,7 @@ div.innerHTML = `
 						<path stroke-linecap="round" stroke-miterlimit="10" d="M338.29 338.29L448 448"></path>
 					</svg>
 				</a>
-				<a id="btn-new-page">
+				<a href="/" id="btn-new-page">
 					<!-- MIT License, (c) 2015-present Ionic (http://ionic.io) -->
 					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
 						<path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" stroke-linecap="round" stroke-linejoin="round"></path>
