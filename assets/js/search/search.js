@@ -3,6 +3,10 @@ var currentSearchSelection = null;
 // search_aliases in search_index mergen
 for (let alias of Object.keys(search_aliases)) {
 	let name = search_aliases[alias]
+	while (Object.keys(search_aliases).includes(name)) {
+		name = search_aliases[name]
+	}
+
 	search_index[name] = { ...search_index[name], ...search_index[alias] }
 	delete search_index[alias]
 }
