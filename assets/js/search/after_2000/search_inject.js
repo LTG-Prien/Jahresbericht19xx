@@ -4,7 +4,7 @@ const OLD_PAGE = "https://ltg-prien.github.io/Jahresbericht19xx/";
 const IS_NEW_PAGE = true;
 const get = id => document.getElementById(id)
 let link = document.createElement("link");
-link.href = OLD_PAGE + "/assets/css/style.css";
+link.href = OLD_PAGE + "/assets/css/search.css";
 link.rel = "stylesheet";
 document.head.appendChild(link);
 
