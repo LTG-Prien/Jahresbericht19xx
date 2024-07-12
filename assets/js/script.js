@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
 	}
 	
 	let cb = () => window.location.href = NEW_PAGE;
-	let ms = 4 * 60 * 1000;
+	let ms = 1 * 60 * 1000;
 	let idleTimeout = setTimeout(cb, ms);
 	
 	for (let event of ['click', 'touchstart', 'mousemove', 'scroll', 'keydown']) {
