@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 
 # Hey there.
+# Ist interaktiv, einfach ausführen.
 # Falls ein PDF nicht klappt, wirst du vermutlich CLASS_REGEX_PART, create_visitor (liest den Text aus) oder try_parse (Parst den Text) bearbeiten wollen.
 # Oder mach gleich alles neu, PDF-Parsing ist extrem instabil
-# Oder stell DEBUG = True und mach den Rest per Hand, fix_classes.py macht dann das meiste und fix_class.py gegen die Fehler
+# Oder stell DEBUG = True und mach den Rest per Hand, fix_classes.py macht dann das meiste und gen_class.py gegen die Fehler
 #
 # Falls sich irgendwer das Script wirklich durch liest: Ich trenne Titel / Klasse und Schüler anhand der Textgröße, das sollte das Verständnis leichter machen :D
 # Bei Fragen: Discord "L3g7", Email contact@l3g7.dev
 
-CLASS_REGEX_PART = "|".join([r"(?<=Klasse )\d+[a-e]", r"Q12 \d", r"Ukraine"])
-DEBUG = True
+CLASS_REGEX_PART = "|".join([r"(?<=Klasse )\d+[a-e]", r"Q12 \d", r"Ukraine"])  # Regex zur Erkennung der Klassennamen, z.B. "Klasse 12c", "Q12 3"
+DEBUG = False
 
-from PyPDF2 import PdfReader, errors
+from PyPDF2 import PdfReader, errors # 3.0.1
 import re, os, sys, json
 from datetime import datetime
 
@@ -250,7 +251,7 @@ if suggestion[0] is None:
 else:
     info("PDF wurde geladen.")
 
-start = int(ask("Startseite der Klassenübersicht, ohne Deckblatt", check_start_page, suggestion[0]))
+start = int(ask("Startseite der Klassenübersicht, ohne Deckblatt (wahrscheinlich Klasse 5a) (PDF-Seitenzahl, nicht gedruckte)", check_start_page, suggestion[0]))
 
 end = int(ask("Endseite der Klassenübersicht, inklusive", check_end_page, suggestion[1]))
 
@@ -268,5 +269,7 @@ for result0 in generate_search_index(reader, start, end):
     pupil_count += len(result[1])
     json_result += f'"{result[0]}":' + '{"page":' + str(page) + ',"pupils":' + str(result[1]).replace("'", '"').replace('", "', '","') + '},\n'
 
-info(f"Ergebnis: {class_count} Klassen mit {pupil_count} Schülern gefunden. {warn_count} Warnungen, {error_count} Fehler.")
 print(json_result)
+info(f"Ergebnis: {class_count} Klassen mit {pupil_count} Schülern gefunden. {warn_count} Warnungen, {error_count} Fehler.")
+info(f"Klasse wurde nicht gefunden? Füge sie manuell mit gen_class.py hinzu")
+info(f"Ergebnis unbrauchbar? Stell DEBUG=True und kopier den Output in fix_classes.py")

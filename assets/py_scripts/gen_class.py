@@ -114,7 +114,7 @@ Zanier, Felix
 Ritter von Zumbusch, Severin
 """
 
-import re, json
+import re
 
 texts = []
 for part in text.strip().split('\n'):
