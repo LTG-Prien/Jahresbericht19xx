@@ -1,6 +1,25 @@
 // Such-Index.
 // Mehr oder weniger automatisch generiert (Siehe assets/py_scripts/generate_search_index_pdf.py).
 
+/*
+Format:
+
+const search_index_new = {
+	"2003-2004": {
+		"5a": {
+			"page": 18,
+			"pupils": [
+				"Bergmann Doris",
+				...
+			]
+		},
+		...
+	},
+	...
+}
+
+*/
+
 const flipbook_ids = {
 	"1999-2000": 230,
 	"2007-2008": 225,
