@@ -1,3 +1,4 @@
+// Such-Logik.
 var currentSearchSelection = null;
 
 // search_aliases in search_index mergen

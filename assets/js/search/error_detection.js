@@ -1,3 +1,4 @@
+// OCR-Fehlererkennung. Für den Endnutzer nicht sichtbar
 function findDuplicates() {
 	let names = Object.keys(search_index);
 

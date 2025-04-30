@@ -1,3 +1,4 @@
+// Script zum injecten des Overlays in die neue Seite
 const NEW_PAGE = "https://ltgarchiv.wanderl.com/";
 const OLD_PAGE = "https://ltg-prien.github.io/Jahresbericht19xx/";
 

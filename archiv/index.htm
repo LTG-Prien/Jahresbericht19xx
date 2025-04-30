@@ -16,7 +16,7 @@ Hotfix um Bugs durch CORS zu fixen:
   Alle top.frames-Zugriffe wurden mit window.postMessage ersetzt.
   event.data-Format:
   [
-    operation,
+    operation, // load_info, load_grus_idx, load, href_click, search_hit, ch_sel_init (siehe unten)
 	window.location des Senders (für relative src-Pfade),
 	... sonstige Parameter
   ]
@@ -27,7 +27,7 @@ window.addEventListener("message", (event) => {
 	let parts = event.data.split("\n")
 
 	// relativen Ordner herausfinden
-	// klappt nur wenn index.htm wirklich im obersten Ordner (relativ zu den einzelnen Seiten) ist aber egal (es klappt)
+	// klappt nur wenn index.htm wirklich im obersten Ordner (relativ zu den einzelnen Seiten) ist, aber klappt
 	let commonSuperpart = "" + window.location
 	commonSuperpart = commonSuperpart.substring(0, commonSuperpart.lastIndexOf("/"))
 	let relPath = parts[1].substring(commonSuperpart.length + 1)

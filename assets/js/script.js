@@ -2,7 +2,7 @@ const get = id => document.getElementById(id)
 
 
 // Leitet messages ans content-Frame weiter.
-// (Siehe script in index.htm)
+// (Siehe script in archiv/index.htm)
 window.addEventListener("message", (event) => {
 	if (event.data === "redirect") {
 		window.location.href = NEW_PAGE

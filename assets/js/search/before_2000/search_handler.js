@@ -1,3 +1,4 @@
+// Such-Weiterleitung auf der alten Seite
 function gotoBefore2000(res) {
 	let classCode = res[1].replaceAll(/\D/g, "")
 	if (parseInt(res[0]) < 65) {

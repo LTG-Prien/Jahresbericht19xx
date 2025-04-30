@@ -1,3 +1,4 @@
+// Such-Weiterleitung auf der neuen Seite
 function gotoBefore2000(res) {
 	window.location.href = OLD_PAGE + `/#${res[0]},${res[1]}`
 }
