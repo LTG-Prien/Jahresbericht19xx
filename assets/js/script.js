@@ -18,7 +18,7 @@ window.addEventListener("load", () => {
 });
 
 
-// Timer um nach 4 Minuten Inaktivität zur Startseite zu leiten
+// Timer um nach einer Minute Inaktivität zur Startseite zu leiten
 (function () {
 	let path = window.location.pathname;
 	if (path === "/" || path.startsWith("/wp-")) {

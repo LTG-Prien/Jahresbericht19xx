@@ -7,7 +7,7 @@
 Herzlich willkomen zu 50 Jahren LTG Prien
 </TITLE>
 <META NAME="AUTHOR" CONTENT="LTG Prien, L. Hartl, Dr. G. Hetz">
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <SCRIPT Language="JavaScript">
 /*
 Mein Beileid an den, der damit weiterarbeiten muss.
@@ -17,11 +17,11 @@ Hotfix um Bugs durch CORS zu fixen:
   event.data-Format:
   [
     operation,
-	window.location des Senders (für relative src-Pfade),
+	window.location des Senders (fÃ¼r relative src-Pfade),
 	... sonstige Parameter
   ]
 */
-var lock = false, lock2 = false; // Sperren um Überschreiben der Auswahl während Suche zu verhindern
+var lock = false, lock2 = false; // Sperren um Ãœberschreiben der Auswahl wÃ¤hrend Suche zu verhindern
 window.addEventListener("message", (event) => {
 	if (!event.data.split) { return }
 	let parts = event.data.split("\n")
@@ -33,7 +33,7 @@ window.addEventListener("message", (event) => {
 	let relPath = parts[1].substring(commonSuperpart.length + 1)
 	let relFolder = relPath.substring(0, relPath.lastIndexOf("/") + 1)
 	
-	if (parts[0] === "load_info") { // früher die load_info-Methode
+	if (parts[0] === "load_info") { // frÃ¼her die load_info-Methode
 		if (lock) {
 			lock = !lock;
 		} else {
@@ -55,9 +55,9 @@ window.addEventListener("message", (event) => {
 	
 	else if (parts[0] === "href_click") {
 		// <a href="...">, durch onclick="window.postMessage(...)" ersetzt.
-		// Die <a>-Tags sind in dem Menü links, leiteten das dann auf die gewünschte Seite weiter,
-		// die dann in body.onload das Menü links wieder durch die Menüseite und das Hauptframe durch
-		// die gewünschte ersetzte.
+		// Die <a>-Tags sind in dem MenÃ¼ links, leiteten das dann auf die gewÃ¼nschte Seite weiter,
+		// die dann in body.onload das MenÃ¼ links wieder durch die MenÃ¼seite und das Hauptframe durch
+		// die gewÃ¼nschte ersetzte.
 		// Keine Ahnung wer sich das ausgedacht hat, jetzt wird das Haupt-Frame direkt ersetzt.
 		document.getElementById('info').src = relFolder + parts[2];
 	}
@@ -127,7 +127,7 @@ Ihr Browser unterst&uuml;tzt leider keine Frames. Zum Betrachten dieser CD ist
 ein framef&auml;higer Browser notwendig. Bitte installieren Sie einen
 Browser der Framesets unterst&uuml;tzt, z.B. Netscape Navigator ab Version 3.0
 oder Microsoft Internet Explorer ab Version 4.0, auf Ihrem Rechner. Au&#223;erdem
-müssen Sie das Ausführen von JavaScript zulassen.
+m&uuml;ssen Sie das Ausf&uuml;hren von JavaScript zulassen.
 </BODY>
 </NOFRAMES>
 </HTML>
